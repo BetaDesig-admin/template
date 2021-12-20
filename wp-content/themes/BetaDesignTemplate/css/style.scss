@@ -12,7 +12,7 @@
 }
 
 @import "../gutenberg/partials/banner_image/banner_image";
-@import "../gutenberg/partials/basic_two_column/basic_two_column";
+@import "../gutenberg/partials/two_column/two_column";
 @import "../gutenberg/partials/text_content/text_content";
 @import "../gutenberg/partials/instagram/instagram";
 @import "../gutenberg/partials/news_display/news_display";
@@ -29,8 +29,8 @@ body:not(.wp-admin),
   margin: 0;
 
 
-  @import "layouts/header";
-  @import "layouts/footer";
+  @import "assets/header";
+  @import "assets/footer";
   @import "import/fonts";
 
   .container {

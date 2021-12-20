@@ -50,7 +50,7 @@ if ($is_preview) {
 
 ?>
 
-<section class="basic_two_column <?= $background . ' ' . $backgroundActive . ' ' . $order . ' ' . $backgroundType . ' ' . $backgroundPlacement ?>">
+<section class="two_column <?= $background . ' ' . $backgroundActive . ' ' . $order . ' ' . $backgroundType . ' ' . $backgroundPlacement ?>">
     <div class="container">
         <div class="image <?= $textOrder . ' ' . $isActive . ' ' . $icon ?>">
             <img src="<?= $image['url'] ?>" alt=""/>

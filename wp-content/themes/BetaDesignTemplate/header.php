@@ -14,6 +14,9 @@
     </title>
     <?php wp_head(); ?>
 
+
+
+
     <link rel="icon" type="image/png" href="<?php bloginfo('stylesheet_directory'); ?>/images/favicon/favicon.png"/>
 </head>
 <body>

@@ -1,6 +1,6 @@
 @import "../../../css/import/variables";
 
-section.basic_two_column {
+section.two_column {
   padding: 85px 0;
   margin: 60px 0;
 
@@ -326,7 +326,7 @@ section.basic_two_column {
 
 
 .acf-block-preview {
-  section.basic_two_column {
+  section.two_column {
     &.backgroundColor {
       &:before {
         z-index: 0;
