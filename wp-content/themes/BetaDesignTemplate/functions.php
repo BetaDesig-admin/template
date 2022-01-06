@@ -44,9 +44,7 @@ function custom_styles($init_array)
     );
 
     // Insert the array, JSON ENCODED, into 'style_formats'
-    $init_array['style_formats'] = json_encode($style_formats);
-
-    return $init_array;
+    $init_array['style_formats'] = json_encode($style_formats);    return $init_array;
 }
 
 add_filter('tiny_mce_before_init', 'custom_styles');
