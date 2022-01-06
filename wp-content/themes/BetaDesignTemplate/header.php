@@ -25,7 +25,7 @@
     <div class="container">
         <section class="logo">
             <a href="<?php echo home_url(); ?>">
-                <?= file_get_contents(get_template_directory() . "/images/SVG/logo/logo.svg"); ?>
+                <?= file_get_contents(get_template_directory() . "/images/SVG/logo/logo_simple.svg"); ?>
             </a>
         </section>
         <label for="menuToggle">
