@@ -16,8 +16,8 @@ add_action('enqueue_block_editor_assets', function () {
     wp_enqueue_style('style', get_template_directory_uri() . '/css/style.css');
 }, 99);
 
-
-add_filter('block_editor_settings', function ($settings) {
-    unset($settings['styles'][0]);
-    return $settings;
-});
+//
+//add_filter('block_editor_settings', function ($settings) {
+//    unset($settings['styles'][0]);
+//    return $settings;
+//});
