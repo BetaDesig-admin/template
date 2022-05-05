@@ -35,12 +35,6 @@ add_filter('mce_buttons_2', 'fb_mce_editor_buttons');
 function custom_styles($init_array)
 {
     $style_formats = array(
-
-        array(
-            'title' => 'Tekst decoration - squiggly - Dark blue',
-            'selector' => 'h1,h2,h3,h4,h5,h6',
-            'classes' => 'squiggly primary-dark',
-        )
     );
 
     // Insert the array, JSON ENCODED, into 'style_formats'

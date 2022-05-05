@@ -2,54 +2,44 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $heading-font;
   font-weight: 600;
   color: inherit;
-
-  .squiggly {
-    &:after {
-      content: url(../images/SVG/text_decoration_line.svg);
-      width: 100%;
-      position: relative;
-      top: -75px;
-      z-index: 1;
-    }
-  }
 }
 
 h1 {
-  font-size: 60px;
+  font-size: 45px;
   @media(max-width: 1024px) {
-    font-size: 55px;
+    font-size: 40px;
   }
   @media(max-width: 769px) {
-    font-size: 50px;
+    font-size: 35px;
   }
   @media(max-width: 650px) {
-    font-size: 40px;
+    font-size: 30px;
   }
 }
 
 h2 {
-  font-size: 55px;
+  font-size: 40px;
   @media(max-width: 1024px) {
-    font-size: 50px;
+    font-size: 35px;
   }
   @media(max-width: 769px) {
-    font-size: 45px;
+    font-size: 30px;
   }
   @media(max-width: 650px) {
-    font-size: 40px;
+    font-size: 25px;
   }
 }
 
 h3 {
-  font-size: 50px;
+  font-size: 35px;
   @media(max-width: 1024px) {
-    font-size: 45px;
+    font-size: 30px;
   }
   @media(max-width: 769px) {
-    font-size: 40px;
+    font-size: 25px;
   }
   @media(max-width: 650px) {
-    font-size: 35px;
+    font-size: 20px;
   }
 }
 
@@ -84,28 +74,19 @@ a {
   font-family: $regular-font;
 
   &:hover {
-    color: #cfaa8f;
+    color: $primary-color;
     transition: .3s ease-in-out color;
   }
+}
 
-  &.underline {
-    &:after {
-      content: url(../../images/SVG/text_decoration_line_straight.svg);
-      width: 100%;
-      margin-top: 5px;
-    }
+p, li, span {
+  color: inherit;
+  font-family: $regular-font;
+  font-size: 14px;
+  font-weight: 300;
+
+  @media(min-width: 1650px) {
+    font-size: 16px;
   }
 }
 
-p, li {
-  color: inherit;
-  font-family: $regular-font;
-  font-size: 16px;
-  font-weight: 300;
-}
-
-span {
-  color: inherit;
-  font-family: $regular-font;
-  font-size: 18px;
-}

@@ -11,31 +11,15 @@
 $is_small_preview = get_field("is_small_preview");
 
 
-$background = get_field('backgroundColor');
-$backgroundType = get_field('backgroundColorType');
-$backgroundPlacement = get_field('imageBgColorPlacement');
 $order = get_field('order');
 $image = get_field('image');
 $text = get_field('text');
-$iconActive = get_field('iconOverImage');
-
 $textOrder = '';
-$backgroundActive = '';
-$isActive = '';
-$icon = '';
 
 if ($order === 'image') {
     $textOrder = 'first';
 }
 
-if ($background) {
-    $backgroundActive = 'backgroundColor';
-}
-
-if ($iconActive) {
-    $isActive = 'icon';
-    $icon = get_field('icon');
-}
 
 if ($is_preview) {
     if (!$image['url']) {
@@ -50,9 +34,9 @@ if ($is_preview) {
 
 ?>
 
-<section class="two_column <?= $background . ' ' . $backgroundActive . ' ' . $order . ' ' . $backgroundType . ' ' . $backgroundPlacement ?>">
+<section class="two_column <?= $order ?>">
     <div class="container">
-        <div class="image <?= $textOrder . ' ' . $isActive . ' ' . $icon ?>">
+        <div class="image <?= $textOrder ?>">
             <img src="<?= $image['url'] ?>" alt=""/>
         </div>
         <div class="textContent">

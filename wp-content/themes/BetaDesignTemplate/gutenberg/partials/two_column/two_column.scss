@@ -24,98 +24,8 @@ section.two_column {
       order: 2;
       background-color: $primary-color;
 
-      &.icon {
-        &:before {
-          content: '';
-          top: -75px;
-          right: 50px;
-          width: 150px;
-          height: 150px;
-          background-color: $primary-color;
-          border-radius: 100%;
-          position: absolute;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          @media(max-width: 960px) {
-            right: 30px;
-            top: 30px;
-          }
-        }
-
-        &.spand {
-          &:before {
-            content: url(../images/SVG/betaIcons/malerspand_icon.svg);
-          }
-        }
-
-        &.pensler {
-          &:before {
-            content: url(..//images/SVG/betaIcons/pensel_icon.svg);
-          }
-        }
-
-        &.malerruller {
-          &:before {
-            content: url(..//images/SVG/betaIcons/malerrulle_icon.svg);
-          }
-        }
-
-        &.tapet {
-          &:before {
-            content: url(../images/SVG/betaIcons/tapet_icon.svg);
-          }
-        }
-
-        &.spartelmasse {
-          &:before {
-            content: url(../images/SVG/betaIcons/spartelmasse_icon.svg);
-          }
-        }
-
-        &.kunstnerartikler {
-          &:before {
-            content: url(../images/SVG/betaIcons/kunsterartikler_icon.svg);
-          }
-        }
-
-        &.lim {
-          &:before {
-            content: url(../images/SVG/betaIcons/lim_icon.svg);
-          }
-        }
-
-        &.byggematerialer {
-          &:before {
-            content: url(../images/SVG/betaIcons/byggematerialer_icon.svg);
-          }
-        }
-
-        &.emballage {
-          &:before {
-            content: url(../images/SVG/betaIcons/emballage_icon.svg);
-          }
-        }
-
-        &.glass {
-          &:before {
-            content: url(../images/SVG/betaIcons/glass_icon.svg);
-          }
-        }
-      }
-
       &.first {
         order: 1;
-
-        &.icon {
-          &:before {
-            right: unset;
-            left: 50px;
-            @media(max-width: 960px) {
-              left: 30px;
-            }
-          }
-        }
       }
 
       img {
@@ -142,149 +52,8 @@ section.two_column {
     }
   }
 
-  &.backgroundColor.imagebg {
-    &.bottom {
-      div.image {
-        &:after {
-          bottom: -100px;
-        }
-      }
-    }
-
-    &.top {
-      div.image {
-        &:after {
-          top: -100px;
-        }
-      }
-    }
-
-    &.bottom, &.top {
-      div.image {
-        &:after {
-          content: '';
-          width: 110%;
-          position: absolute;
-          background-color: $primary-color;
-          height: 200px;
-          left: -5%;
-          z-index: -1;
-          @media(max-width: $container-width) {
-            width: 105%;
-          }
-        }
-      }
-    }
-
-    &.left {
-      div.image {
-        &:after {
-          left: -60px;
-
-          @media(max-width: $container-width) {
-            left: -20px;
-          }
-        }
-      }
-    }
-
-    &.right {
-      div.image {
-        &:after {
-          right: -60px;
-          @media(max-width: $container-width) {
-            right: -20px;
-          }
-
-        }
-      }
-    }
-
-    &.left, &.right {
-      div.image {
-        &:after {
-          content: '';
-          width: 200px;
-          position: absolute;
-          background-color: $primary-color;
-          height: 120%;
-          top: -10%;
-          z-index: -1;
-
-        }
-      }
-    }
-  }
-
-  &.backgroundColor.textbg {
-    position: relative;
-
-
-    &:before {
-      z-index: -1;
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 65%;
-      height: 100%;
-    }
-
-    &.image {
-      &:before {
-        left: unset;
-        right: 0;
-      }
-    }
-
-    &.primary {
-
-      div.container {
-        div.textContent {
-          color: $white-color;
-        }
-      }
-
-      &:before {
-        background-color: $primary-color;
-      }
-    }
-
-    &.primaryDarken {
-
-      div.container {
-        div.textContent {
-          color: $white-color;
-        }
-      }
-
-      &:before {
-        background-color: $primary-color-darken;
-      }
-    }
-
-    &.brown {
-
-      div.container {
-        div.textContent {
-          color: $white-color;
-        }
-      }
-
-      &:before {
-        background-color: $brown;
-      }
-    }
-  }
-
 
   @media(max-width: 1025px) {
-    &.backgroundColor {
-      &:before {
-        width: 100%;
-      }
-    }
-
     div.container {
       gap: 25px;
 
@@ -294,9 +63,6 @@ section.two_column {
     }
   }
   @media(max-width: 960px) {
-    &.backgroundColor.textbg:before {
-      width: 100%;
-    }
     div.container {
       gap: 10px;
       flex-direction: column;
@@ -319,25 +85,6 @@ section.two_column {
         &.first {
           order: 2;
         }
-      }
-    }
-  }
-}
-
-
-.acf-block-preview {
-  section.two_column {
-    &.backgroundColor {
-      &:before {
-        z-index: 0;
-      }
-    }
-
-    div.container {
-      z-index: 2;
-
-      div.textContent, div.image {
-        z-index: 2;
       }
     }
   }

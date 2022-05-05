@@ -11,13 +11,9 @@
   max-width: $container-width;
 }
 
-@import "../gutenberg/partials/banner_image/banner_image";
+
 @import "../gutenberg/partials/two_column/two_column";
 @import "../gutenberg/partials/text_content/text_content";
-@import "../gutenberg/partials/instagram/instagram";
-@import "../gutenberg/partials/news_display/news_display";
-@import "../gutenberg/partials/slider_two_column/slider_two_column";
-@import "../gutenberg/partials/form_two_column/form_two_column";
 
 body:not(.wp-admin),
 .acf-block-preview {
@@ -39,14 +35,14 @@ body:not(.wp-admin),
     width: 100%;
   }
 
-  @media(max-width: $container-width) {
+  @media(max-width: $container-width + 40px) {
     .container {
       width: 100%;
       padding: 0 20px;
     }
   }
 
-  #menuToggle{
+  #menuToggle {
     position: absolute;
     top: -100px;
   }
@@ -82,94 +78,6 @@ body:not(.wp-admin),
 
   .page_not_found ~ footer {
     margin-top: 0;
-  }
-
-
-  .search_container, .search_results {
-    section.banner {
-      img {
-        max-height: 400px;
-        object-fit: cover;
-        display: block;
-      }
-    }
-
-    form {
-
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-content: center;
-
-      label {
-        width: 100%;
-      }
-
-      input:not([type=submit]), textarea {
-        padding: 20px;
-
-        border: 1px solid $primary-color;
-        resize: none;
-        width: 100%;
-
-        @media(max-width: 960px) {
-          margin: 10px 0;
-        }
-
-
-        &::placeholder {
-          color: $primary-color;
-        }
-      }
-
-      input[type=submit] {
-        cursor: pointer;
-        font-size: 20px;
-        font-weight: 600;
-        color: $primary-color;
-        font-family: $heading-font;
-        transition: .3s ease-in-out color;
-
-        &:hover {
-          transition: .3s ease-in-out color;
-          color: darken($primary-color, 10%);
-        }
-
-        background-color: transparent;
-        border: none;
-
-      }
-
-      div.submitBorder {
-        margin: 0 0 0 60px;
-        display: inline-block;
-        position: relative;
-
-        &:after {
-          content: url(../images/SVG/text_decoration_line_straight.svg);
-          position: absolute;
-          bottom: 0;
-          right: 0;
-          width: 100%;
-
-        }
-      }
-    }
-  }
-
-  .search_results {
-    color: $primary-color;
-
-    h2 {
-      font-size: 30px;
-      border-bottom: 1px solid $primary-color-darken;
-      display: flex;
-      justify-content: space-between;
-
-      a {
-        text-decoration: none;
-      }
-    }
   }
 
   .privacy {
