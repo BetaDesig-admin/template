@@ -1,0 +1,45 @@
+[
+    {
+        "key": "group_62eb83d70e6e6",
+        "title": "Kontakt [BLOCK]",
+        "fields": [
+            {
+                "key": "field_62eb83e70c204",
+                "label": "Overskrift",
+                "name": "heading",
+                "type": "text",
+                "instructions": "Indtast en kort overskrift",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Du finder os her",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/contactinfo"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0
+    }
+]

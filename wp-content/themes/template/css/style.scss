@@ -1,0 +1,59 @@
+@import "import/variables";
+
+
+.mce-text {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  color: $black-color !important;
+}
+
+.wp-block {
+  max-width: $container-width;
+}
+
+
+@import "../gutenberg/partials/two_column/two_column";
+@import "../gutenberg/partials/text_content/text_content";
+@import "../gutenberg/partials/banner/banner";
+@import "../gutenberg/partials/logo_slider/logo_slider";
+@import "../gutenberg/partials/slider_two_column/slider_two_column";
+@import "../gutenberg/partials/top_header/top_header";
+@import "../gutenberg/partials/contact_info/contact_info";
+@import "../gutenberg/partials/accordian/accordian";
+@import "../gutenberg/partials/steps/steps";
+@import "../gutenberg/partials/quote/quote";
+@import "../gutenberg/partials/slider/slider";
+@import "../gutenberg/partials/icons/icons";
+@import "../gutenberg/partials/image/image";
+
+body:not(.wp-admin),
+.acf-block-preview {
+
+  * {
+    box-sizing: border-box;
+  }
+
+  margin: 0;
+
+  @import "assets/header";
+  @import "assets/footer";
+  @import "assets/error";
+  @import "import/fonts";
+
+  .container {
+    margin: 0 auto;
+    max-width: $container-width;
+    width: 100%;
+  }
+
+  @media(max-width: $container-width + 40px) {
+    .container {
+      width: 100%;
+      padding: 0 20px;
+    }
+  }
+
+  .privacy {
+    color: $primary-color;
+  }
+}

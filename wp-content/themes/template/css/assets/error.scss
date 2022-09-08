@@ -1,0 +1,26 @@
+.page_not_found {
+  padding: 100px 0;
+  text-align: center;
+  color: $white-color;
+  background-color: $primary-color;
+
+  a {
+    z-index: 2;
+
+    &:after {
+      z-index: 1;
+    }
+  }
+
+  h1 {
+    z-index: 2;
+
+    &:after {
+      z-index: -1;
+    }
+  }
+}
+
+.page_not_found ~ footer {
+  margin-top: 0;
+}

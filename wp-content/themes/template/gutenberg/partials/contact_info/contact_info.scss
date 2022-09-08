@@ -1,0 +1,47 @@
+section.contact_info {
+  margin: $margin-large $margin-small;
+  div.container {
+    article.body {
+      display: flex;
+      flex-direction: column;
+
+
+      div.content {
+        div.singles {
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          @media(max-width: 650px) {
+            flex-direction: column;
+          }
+
+          div.single {
+            @media(max-width: 950px) {
+              flex-basis: 50%;
+            }
+            @media(max-width: 650px) {
+              flex-basis: 100%;
+            }
+
+            p {
+              a {
+                &:hover {
+                  border-bottom: 1px solid $primary-color;
+                }
+              }
+            }
+
+            a {
+              text-decoration: none
+            }
+
+            .socials {
+              color: $black-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}

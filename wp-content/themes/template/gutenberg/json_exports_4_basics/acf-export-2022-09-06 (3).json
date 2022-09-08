@@ -1,0 +1,295 @@
+[
+    {
+        "key": "group_61a620d02f2d5",
+        "title": "Steps - Indhold",
+        "fields": [
+            {
+                "key": "field_61af4d1e377ad",
+                "label": "Venstre\/højre orientering",
+                "name": "order",
+                "type": "button_group",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "left": "Venstre",
+                    "right": "Højre"
+                },
+                "allow_null": 0,
+                "default_value": "",
+                "layout": "horizontal",
+                "return_format": "value"
+            },
+            {
+                "key": "field_61a620d686432",
+                "label": "Overskrift",
+                "name": "heading",
+                "type": "text",
+                "instructions": "Indtast en kort overskrift",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_61af444a235d2",
+                "label": "Vælg layout",
+                "name": "mode",
+                "type": "button_group",
+                "instructions": "Vælg hvilken layout der bliver brugt",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "stepMode": "Steps",
+                    "factMode": "Facts",
+                    "postMode": "Opslag"
+                },
+                "allow_null": 0,
+                "default_value": "stepMode : Steps",
+                "layout": "horizontal",
+                "return_format": "value"
+            },
+            {
+                "key": "field_61af44ca235d6",
+                "label": "Link",
+                "name": "link",
+                "type": "link",
+                "instructions": "Vælg et link og indtast link tekst",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_61af444a235d2",
+                            "operator": "!=",
+                            "value": "factMode"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array"
+            },
+            {
+                "key": "field_61af4480235d3",
+                "label": "Facts",
+                "name": "facts",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_61af444a235d2",
+                            "operator": "==",
+                            "value": "factMode"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 0,
+                "max": 0,
+                "layout": "block",
+                "button_label": "Tilføj fact",
+                "sub_fields": [
+                    {
+                        "key": "field_61af448b235d4",
+                        "label": "Index",
+                        "name": "index",
+                        "type": "text",
+                        "instructions": "Skriv en meget kort index tekst",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_61af44b1235d5",
+                        "label": "Indhold",
+                        "name": "text",
+                        "type": "wysiwyg",
+                        "instructions": "Indtast og formatter indholdet",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "tabs": "all",
+                        "toolbar": "full",
+                        "media_upload": 1,
+                        "delay": 0
+                    }
+                ]
+            },
+            {
+                "key": "field_61a620eb86433",
+                "label": "Steps",
+                "name": "steps",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_61af444a235d2",
+                            "operator": "==",
+                            "value": "stepMode"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 0,
+                "max": 0,
+                "layout": "block",
+                "button_label": "Tilføj nummer",
+                "sub_fields": [
+                    {
+                        "key": "field_61a620fe86434",
+                        "label": "Tekst",
+                        "name": "text",
+                        "type": "wysiwyg",
+                        "instructions": "Indtast og formatter indholdet",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "tabs": "all",
+                        "toolbar": "full",
+                        "media_upload": 1,
+                        "delay": 0
+                    }
+                ]
+            },
+            {
+                "key": "field_61af5d0d3da87",
+                "label": "Opslag",
+                "name": "weekposts",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_61af444a235d2",
+                            "operator": "==",
+                            "value": "postMode"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 0,
+                "max": 0,
+                "layout": "block",
+                "button_label": "Tilføj notat",
+                "sub_fields": [
+                    {
+                        "key": "field_61af5d203da88",
+                        "label": "Dag",
+                        "name": "day",
+                        "type": "text",
+                        "instructions": "Indtast ugedag\/note",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_61af5d2f3da89",
+                        "label": "Notat",
+                        "name": "notat",
+                        "type": "textarea",
+                        "instructions": "Indtast en kort tekst",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "maxlength": "",
+                        "rows": "",
+                        "new_lines": ""
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/steps"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0
+    }
+]
