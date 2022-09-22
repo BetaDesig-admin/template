@@ -1,7 +1,0 @@
-<svg id="Arrow" xmlns="http://www.w3.org/2000/svg" width="33" height="6" viewBox="0 0 33 6">
-    <line id="Line_48" data-name="Line 48" x2="30" transform="translate(0 3)" fill="none" stroke="#000000" stroke-width="1"/>
-    <g id="Polygon_22" data-name="Polygon 22" transform="translate(33) rotate(90)" fill="#000000">
-        <path d="M 5.116899967193604 4.5 L 0.8830999732017517 4.5 L 3 0.971833348274231 L 5.116899967193604 4.5 Z" stroke="none"/>
-        <path d="M 3 1.943650007247925 L 1.766190052032471 4 L 4.233809947967529 4 L 3 1.943650007247925 M 3 0 L 6 5 L 0 5 L 3 0 Z" stroke="none" fill="#000000"/>
-    </g>
-</svg>

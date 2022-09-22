@@ -27,7 +27,7 @@ if (!$factBox) {
         <div class="btn">
             <a class="sideBtn" href="<?= $link['url'] ?>">
                 <?= $link['title'] ?>
-                <?= file_get_contents(get_template_directory() . "/images/SVG/arrow_right.svg"); ?>
+                <?= file_get_contents(get_template_directory() . "/images/svg/arrow_right.svg"); ?>
             </a>
         </div>
     <?php } ?>

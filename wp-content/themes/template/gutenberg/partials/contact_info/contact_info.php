@@ -41,11 +41,11 @@ $address = $street . ', ' . $zip . ' ' . $city;
                         <?php } ?>
                         <div class="socials">
                             <?php if ($facebook) { ?>
-                                <a href="<?= $facebook ?>"><?= file_get_contents(get_template_directory() . "/images/SVG/facebook_black.svg"); ?></a>
+                                <a href="<?= $facebook ?>"><?= file_get_contents(get_template_directory() . "/images/svg/facebook_black.svg"); ?></a>
                             <?php } ?>
 
                             <?php if ($linkedin) { ?>
-                                <a href="<?= $linkedin ?>"><?= file_get_contents(get_template_directory() . "/images/SVG/linkedin_black.svg"); ?></a>
+                                <a href="<?= $linkedin ?>"><?= file_get_contents(get_template_directory() . "/images/svg/linkedin_black.svg"); ?></a>
                             <?php } ?>
                         </div>
                     </div>

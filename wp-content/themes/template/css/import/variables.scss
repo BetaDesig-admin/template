@@ -1,19 +1,29 @@
+/*todo Skift Values på alle variables. */
+
 /* COLORS */
 $white-color: #F6F6F6;
 $black-color: #000;
-$primary-color: #2C3BFF;
+$primary-color: '';
 
 /* FONTS */
 $standard-fontsize: 1.4em;
 
-$regular-font: 'Work Sans', sans-serif;
-$heading-font: 'Lust', sans-serif;
+$regular-font: '', sans-serif;
+$heading-font: '', sans-serif;
 
 /* ELEMENT SIZING */
-$container-width: 1350px;
+$container-width: 0px;
+
 
 /* SPACING */
-$padding-small: 40px;
-$padding-large: 100px;
-$margin-small: 20px;
-$margin-large: 120px;
+$padding-xsmall: 20px;
+$padding-small: 25px;
+$padding-medium: 75px;
+$padding-xmedium: 100px;
+$padding-large: 150px;
+
+$margin-xsmall: 20px;
+$margin-small: 25px;
+$margin-medium: 75px;
+$margin-xmedium: 100px;
+$margin-large: 150px;

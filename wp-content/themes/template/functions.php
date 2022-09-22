@@ -6,6 +6,15 @@ if (isset($_GET['test'])) {
     error_reporting(E_ALL);
 }
 
+/*todo
+Importer evt Posttypes
+Ryd op i Blocks
+Indsæt nyt Screenshot.png
+Indsæt Favicon
+Installer Cache
+Importer posttypes
+*/
+
 require_once(__DIR__ . "/gutenberg/blocks.php");
 require_once(__DIR__ . "/php/enqueue.php");
 require_once(__DIR__ . "/php/admin.php");

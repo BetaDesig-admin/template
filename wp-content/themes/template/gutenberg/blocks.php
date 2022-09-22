@@ -2,9 +2,21 @@
 
 function allow_blocks($blocks, $post)
 {
-
+    /*todo Gennemgå blokke og design og fravalgt dem der ikke er relevante. */
     $blocks = [
-        'acf/twocolumn', 'acf/text', 'acf/banner', 'acf/logoslider', 'acf/slidertwocolumn', 'acf/topheader', 'acf/contactinfo', 'acf/accordian', 'acf/steps', 'acf/quote', 'acf/slides', 'acf/icons', 'acf/image'
+        'acf/twocolumn',
+        'acf/text',
+        'acf/banner',
+        'acf/logoslider',
+        'acf/slidertwocolumn',
+        'acf/topheader',
+        'acf/contactinfo',
+        'acf/accordian',
+        'acf/steps',
+        'acf/quote',
+        'acf/slides',
+        'acf/icons',
+        'acf/image'
     ];
 
     return $blocks;

@@ -1,7 +1,7 @@
 @import "../import/variables";
 #menuToggle {
   position: absolute;
-  top: -100px;
+  top: -$margin-large;
 }
 
 header {
@@ -15,9 +15,9 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
+    padding: $padding-xsmall 0;
     @media(max-width: $container-width) {
-      padding: 20px 10px;
+      padding: $padding-xsmall ($padding-xsmall/2);
     }
 
     label, #menuToggle {
@@ -28,7 +28,7 @@ header {
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 20px;
+      gap: $margin-small;
 
       h2 {
         display: none;
@@ -41,7 +41,7 @@ header {
 
           li {
             a {
-              padding: 20px;
+              padding: $padding-xsmall;
               color: $white-color;
               text-decoration: none;
               font-family: $regular-font;
@@ -67,14 +67,9 @@ header {
 }
 
 @media(max-width: 1025px) {
-  #menuToggle {
-    opacity: 0;
-    position: absolute;
-    top: -100px;
-  }
   header {
     div.container {
-      padding: 10px;
+      padding: $padding-xsmall/2;
 
       section.logo {
         z-index: 5;
@@ -87,7 +82,7 @@ header {
       label {
         display: unset;
         z-index: 5;
-        padding-right: 20px;
+        padding-right: $padding-xsmall;
 
         span {
           display: block;
@@ -126,13 +121,13 @@ header {
       position: fixed;
       left: 0;
       top: 0;
-      padding-top: 90px;
+      padding-top: $padding-medium;
       width: 100%;
       background-color: $primary-color;
 
       h2 {
         color: $white-color;
-        margin: 40px 0 5px 0;
+        margin: ($margin-medium - $margin-small) 0 ($margin-xsmall/2) 0;
         font-size: 25px;
         display: flex !important;
 
@@ -152,10 +147,10 @@ header {
           margin: 0;
 
           li {
-            padding: 10px 5px;
+            padding: ($padding-xsmall/2) 5px;
 
             &:last-of-type {
-              padding: 10px 5px 30px 5px;
+              padding: ($padding-xsmall/2) 5px $padding-small 5px;
             }
           }
         }
@@ -180,7 +175,7 @@ header {
 
   #menuToggle:checked ~ header div section.menu {
     opacity: 1;
-    padding-bottom: 50px;
+    padding-bottom: $padding-medium;
     height: 100%;
     -webkit-box-shadow: -5px 7px 15px 2px rgba(0, 0, 0, 0.25);
     box-shadow: -5px 7px 15px 2px rgba(0, 0, 0, 0.25);

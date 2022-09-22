@@ -75,8 +75,8 @@ if ($slides) {
                                     <img src="<?= $image ?>" alt="slide_image"/>
                                     <?php if (count($slides) > 1) { ?>
                                         <div class="navigation <?= $randomID ?>">
-                                            <div class="swiper-button-next-custom"><?= file_get_contents(get_template_directory() . "/images/SVG/arrow_right.svg"); ?></div>
-                                            <div class="swiper-button-prev-custom"><?= file_get_contents(get_template_directory() . "/images/SVG/arrow_right.svg"); ?></div>
+                                            <div class="swiper-button-next-custom"><?= file_get_contents(get_template_directory() . "/images/svg/arrow_right.svg"); ?></div>
+                                            <div class="swiper-button-prev-custom"><?= file_get_contents(get_template_directory() . "/images/svg/arrow_right.svg"); ?></div>
                                         </div>
                                     <?php } ?>
                                 </div>
@@ -92,7 +92,7 @@ if ($slides) {
                                                     <?= $ctaText ?>
                                                 </span>
                                                     <span class="cta_icon">
-                                                    <?= file_get_contents(get_template_directory() . "/images/SVG/arrow_right.svg"); ?>
+                                                    <?= file_get_contents(get_template_directory() . "/images/svg/arrow_right.svg"); ?>
                                                 </span>
                                                 </a>
                                             </div>

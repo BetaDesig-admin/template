@@ -11,6 +11,7 @@ add_action("admin_menu", function() {
 });
 
 
+/*todo ændre menu ordering før lancering. */
 // Reordering the admin menu
 add_filter('custom_menu_order', '__return_true' );
 add_filter('menu_order', function ($menu_ord) {
