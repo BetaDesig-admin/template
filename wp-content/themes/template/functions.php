@@ -6,15 +6,6 @@ if (isset($_GET['test'])) {
     error_reporting(E_ALL);
 }
 
-/*todo
-Importer evt Posttypes
-Ryd op i Blocks
-Indsæt nyt Screenshot.png
-Indsæt Favicon
-Installer Cache
-Importer posttypes
-*/
-
 require_once(__DIR__ . "/gutenberg/blocks.php");
 require_once(__DIR__ . "/php/enqueue.php");
 require_once(__DIR__ . "/php/admin.php");
@@ -65,4 +56,45 @@ function getYoutubeEmbedUrl($url)
 		$youtube_id = $matches[count($matches) - 1];
 	}
 	return 'https://www.youtube.com/embed/' . $youtube_id ;
+}
+
+/**
+ * @param string $layout
+ * @param string $orderBy
+ * @param string $amount
+ * @param string $posttype
+ * @param array $elements
+ * */
+function smartWpQuery($layout = 'standard', $posttype = 'posts', $orderBy = 'ID', $amount = '-1', $cat='')
+{
+    $args = [
+        'post_type' => $posttype,
+        'orderby' => $orderBy,
+        'post_status' => 'publish',
+        'order' => 'DESC',
+        'post_per_page' => $amount
+    ];
+
+    if ($layout === 'single') {
+        if (!$elements) {
+            $elements = get_field('elements');
+        }
+        $args['post__in'] = $elements;
+        $args['posts_per_page'] = -1;
+    }
+
+    if ($layout === 'taxonomy') {
+        $categories_ids = get_field('categories');
+
+        $args['tax_query'] = array(
+            'relation' => 'AND',
+            array(
+                'taxonomy' => $cat,
+                'field' => 'term_id',
+                'terms' => $categories_ids
+            ),
+        );
+    }
+
+    return new WP_Query($args);
 }

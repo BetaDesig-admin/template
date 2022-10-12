@@ -15,18 +15,18 @@
     <?php wp_head(); ?>
 
 
-
-
     <link rel="icon" type="image/png" href="<?php bloginfo('stylesheet_directory'); ?>/images/favicon/favicon.png"/>
 </head>
 <body>
 <input type="checkbox" name="menuToggle" id="menuToggle"/>
+<?php
+$logo = get_field('logo', 'options');
+?>
 <header>
     <div class="container">
         <section class="logo">
             <a href="<?php echo home_url(); ?>">
-                <?php /*todo Skift til rigtige logo */ ?>
-                <?= file_get_contents(get_template_directory() . "/images/svg/logo/logo_simple.svg"); ?>
+                <?= file_get_contents($logo['url']); ?>
             </a>
         </section>
         <label for="menuToggle">

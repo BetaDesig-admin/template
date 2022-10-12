@@ -19,6 +19,9 @@ add_action('enqueue_block_editor_assets', function () {
 }, 99);
 
 //
+//require_once(__DIR__ . "/posttypes/");
+
+//
 //add_filter('block_editor_settings', function ($settings) {
 //    unset($settings['styles'][0]);
 //    return $settings;
