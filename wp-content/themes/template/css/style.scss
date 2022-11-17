@@ -24,6 +24,7 @@ body:not(.wp-admin),
 
   @import "assets/header";
   @import "assets/footer";
+  @import "woo/shared";
   @import "assets/error";
   @import "import/fonts";
 

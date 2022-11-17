@@ -9,6 +9,7 @@ if (isset($_GET['test'])) {
 require_once(__DIR__ . "/gutenberg/blocks.php");
 require_once(__DIR__ . "/php/enqueue.php");
 require_once(__DIR__ . "/php/admin.php");
+require_once(__DIR__ . "/php/woo/shared.php");
 
 register_nav_menus(array('primary' => 'Hovedmenuen', 'footermenu' => 'footermenu'));
 add_theme_support('post-thumbnails', array('post'));

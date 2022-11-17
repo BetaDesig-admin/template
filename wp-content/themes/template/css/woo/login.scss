@@ -1,0 +1,93 @@
+section.woo.login {
+  padding: 100px 0;
+
+  div.woocommerce-notices-wrapper {
+    position: absolute;
+    width: 100%;
+    top: 0;
+
+    .woocommerce-error {
+      &::before {
+        top: 1.5em;
+      }
+    }
+  }
+
+  div.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    article.loginForm {
+      flex-basis: calc(75% - 50px);
+      @media (max-width: 769px) {
+        flex-basis: 100%;
+      }
+
+      div.heading {
+        color: $secondary-color;
+        list-style: none;
+        margin: 0 0 30px 0;
+        //border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        padding: 0 0 15px 0;
+
+        h1 {
+          margin: 0 0 30px 0;
+        }
+      }
+
+      .woocommerce-form {
+        border: none;
+        padding: 0;
+
+        .show-password-input {
+          top: 0;
+          right: 0;
+        }
+
+        .woocommerce-form-row {
+          margin-bottom: 50px;
+        }
+
+        .form-row.footer {
+          width: 100%;
+          text-align: right;
+          display: flex;
+          justify-content: flex-end;
+
+          .woocommerce-form-login__submit {
+            background-color: transparent;
+            padding: 0 25px 0 0;
+            font-family: $regular-font;
+            position: relative;
+            font-size: 26px;
+            margin-right: 0;
+            font-weight: normal;
+
+            background-image: url(../../dss/assets/svg/arrow_for_forms.svg);
+            background-repeat: no-repeat;
+            background-position: right;
+
+            transition: .3s ease-in-out color;
+
+            &:hover {
+              transition: .2s ease-in-out color;
+              color: $primary-color;
+            }
+
+
+          }
+
+        }
+
+        .lost_password {
+          font-size: 14px;
+          color: $secondary-color;
+          width: 100%;
+          text-align: right;
+        }
+      }
+    }
+  }
+}

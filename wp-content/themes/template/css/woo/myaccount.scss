@@ -1,0 +1,209 @@
+section.woo.my-account {
+  padding: 100px 0;
+
+  div.woocommerce-notices-wrapper {
+    font-family: $regular-font;
+    font-weight: 300;
+  }
+
+  div.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    article.accountContent {
+      flex-basis: calc(75% - 100px);
+      @media (max-width: 769px) {
+        flex-basis: 100%;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        font-size: 30px;
+
+        &.sharedTitle {
+          max-width: 50%;
+          @media (max-width: 769px) {
+            max-width: unset;
+            hyphens: auto;
+            -webkit-hyphens: auto;
+          }
+
+          &::before {
+            @media (max-width: 1050px) {
+              left: -25px;
+            }
+          }
+        }
+      }
+
+      label {
+        text-transform: unset;
+      }
+
+      p.my-account-address {
+        font-style: italic;
+      }
+
+      div.sharedForm {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        &.newPassword {
+          flex-direction: column;
+
+          p.form-row {
+            width: calc(50% - 100px);
+            @media (max-width: 1250px) {
+              width: 50%;
+            }
+            @media (max-width: 1050px) {
+              width: 100%;
+            }
+          }
+        }
+
+        p.form-row {
+          flex-basis: calc(50% - 100px);
+          float: unset;
+          @media (max-width: 1250px) {
+            flex-basis: calc(50% - 25px);
+          }
+          @media (max-width: 1050px) {
+            flex-basis: 100%;
+          }
+        }
+      }
+
+      div.woocommerce-notices-wrapper {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        left: 0;
+      }
+
+      div.woocommerce_account_subscriptions {
+        p {
+          display: flex;
+          flex-direction: column;
+
+        }
+
+        .woocommerce-info, .woocommerce-message {
+          padding: unset;
+          margin: unset;
+          position: unset;
+          background-color: unset;
+          color: unset;
+          border-top: unset;
+          list-style: unset;
+          width: unset;
+          word-wrap: unset;
+
+          &::before {
+            display: none;
+          }
+        }
+
+        a.button {
+          border: none;
+          text-decoration: none;
+          cursor: pointer;
+          font-weight: bold;
+          background-color: transparent;
+          color: $secondary-color;
+
+          background-image: url(../../dss/assets/svg/arrow_for_forms.svg);
+          background-repeat: no-repeat;
+          background-position: right;
+          padding-right: 25px;
+          padding-left: unset;
+          width: fit-content;
+
+          transition: .3s ease-in-out color;
+
+          &:hover {
+            transition: .2s ease-in-out color;
+            color: $primary-color;
+          }
+
+          @media(max-width: 950px) {
+            font-size: 16px;
+          }
+
+          @media(max-width: 550px) {
+            text-align: right;
+            width: 100%;
+            margin-top: 50px;
+          }
+        }
+      }
+
+      div.woocommerce-notices-wrapper {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        left: 0;
+
+        .woocommerce-error::before {
+          top: 1.5em;
+        }
+      }
+    }
+  }
+}
+
+section.woo.lost-password {
+  div.woocommerce-notices-wrapper {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+
+    .woocommerce-error::before {
+      top: 1.5em;
+    }
+  }
+
+  .woocommerce-message {
+    font-family: $regular-font;
+    font-weight: 300;
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+  }
+
+  div.container {
+    @media(max-width: 769px) {
+      margin-top: 100px;
+    }
+
+    form.sharedForm, div.sharedForm {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      &.flexRow {
+        flex-direction: row;
+        @media(max-width: 769px) {
+          flex-direction: column;
+        }
+      }
+
+      p.form-row {
+        flex-basis: calc(50% - 50px);
+      }
+    }
+
+    &.lost {
+      @media(max-width: 769px) {
+        margin-top: 100px;
+      }
+    }
+  }
+}
+Footer
