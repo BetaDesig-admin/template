@@ -1,0 +1,181 @@
+section.journey {
+  margin: $margin-large 0;
+  @media (max-width: 769px) {
+    margin: 125px 0;
+  }
+
+  div.container {
+    .wrapper {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      @media (max-width: 850px) {
+        flex-direction: column;
+      }
+
+      .swiper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-basis: 90%;
+        margin-bottom: 0;
+        @media(max-width: 850px) {
+          width: 100%;
+        }
+
+        .slides {
+          order: 2;
+
+          .swiper-slide {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            @media (max-width: 850px) {
+              flex-direction: column-reverse;
+              gap: 50px;
+            }
+
+            div.content {
+              flex-basis: 40%;
+              @media (max-width: 850px) {
+                flex-basis: 100%;
+              }
+
+              h1, h2, h3:not(.header), h4, h5, h6 {
+                margin-top: 15px;
+                font-size: 45px;
+                hyphens: auto;
+                @media (max-width: 769px) {
+                  font-size: 40px;
+                  margin-top: 25px;
+                }
+                @media (max-width: 550px) {
+                  font-size: 35px
+                }
+                @media (max-width: 450px) {
+                  font-size: 30px
+                }
+                @media (max-width: 350px) {
+                  font-size: 25px
+                }
+              }
+
+              h3.header {
+                text-transform: uppercase;
+                font-weight: 300;
+                color: $lightblue-color;
+                margin: unset;
+              }
+              div.journeyNav {
+                display: flex;
+                gap: 25px;
+                a {
+                  text-decoration: underline;
+                  text-underline-position: under;
+                  margin-bottom: 10px;
+                }
+              }
+            }
+
+            div.video {
+              height: 100%;
+              width: 100%;
+              flex-basis: 60%;
+              @media (max-width: 850px) {
+                flex-basis: 100%;
+              }
+
+              video {
+                height: 100%;
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+
+      .parts {
+        display: flex;
+        flex-direction: column;
+        text-transform: uppercase;
+        flex-basis: 10%;
+        position: unset;
+        z-index: 0;
+        gap: 50px;
+        margin-top: 35px;
+        @media (max-width: 850px) {
+          flex-direction: row;
+          gap: 10px;
+          justify-content: space-between;
+          margin-bottom: 25px;
+        }
+
+        .subjectTitle {
+          opacity: 1;
+          transition: 0.2s ease-in-out color;
+          writing-mode: vertical-lr;
+          transform: rotate(180deg);
+          @media (max-width: 850px) {
+            width: unset;
+            gap: 10px;
+            writing-mode: unset;
+            transform: unset;
+          }
+          @media (max-width: 550px) {
+            writing-mode: vertical-lr;
+            transform: rotate(180deg);
+          }
+
+          &:hover {
+            color: $white-color;
+            background-color: transparent;
+          }
+
+          &.swiper-pagination-bullet-active {
+            opacity: 1;
+
+            h4 {
+              position: relative;
+              text-decoration: underline;
+              text-underline-position: under;
+              color: $lightblue-color;
+            }
+
+          }
+
+          &:not(.swiper-pagination-bullet-active) {
+            opacity: 0.5;
+            transition: 0.2s;
+
+            &:hover {
+              opacity: 1;
+            }
+          }
+
+          &.swiper-pagination-bullet {
+            background-color: transparent;
+            height: unset;
+            margin: 0;
+          }
+
+          h4 {
+            font-size: 18px;
+            margin: 0;
+            display: block;
+            text-align: left;
+            color: $lightblue-color;
+            font-weight: 400;
+            @media (max-width: 769px) {
+              font-size: 20px;
+            }
+            @media (max-width: 550px) {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

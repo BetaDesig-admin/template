@@ -1,0 +1,183 @@
+section.sliderCases {
+  margin: $margin-large 0;
+  @media (max-width: 769px) {
+    margin: 125px 0;
+  }
+
+  div.container {
+    max-width: unset;
+    width: unset;
+
+    .header {
+      text-transform: uppercase;
+      font-weight: 300;
+      color: $lightblue-color;
+      margin: unset;
+      @media(max-width: 850px) {
+        margin-bottom: 50px;
+      }
+    }
+
+    .case-wrapper {
+      display: flex;
+      flex-direction: row;
+
+      .caseSwiper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 60%;
+        margin-bottom: 0;
+        @media(max-width: 850px) {
+          width: 100%;
+        }
+
+        .caseImages {
+          max-width: 55%;
+          order: 2;
+
+          .swiper-slide {
+            a {
+              text-decoration: none;
+              cursor: grab;
+              @media(max-width: 769px) {
+                &:hover {
+                  color: $white-color;
+                }
+              }
+            }
+
+            img {
+              width: 100%;
+              height: 70%;
+              object-fit: cover;
+            }
+
+            div.info {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              text-transform: uppercase;
+
+              p {
+                font-size: 25px;
+                @media(max-width: 850px) {
+                  font-size: 16px;
+                }
+              }
+            }
+
+            span {
+              margin-left: 1px;
+              width: 1px;
+              height: 80px;
+              background: $grey-color;
+              display: block;
+              @media(max-width: 769px) {
+                height: 40px;
+              }
+            }
+          }
+        }
+      }
+
+      div.list {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        @media (max-width: 850px) {
+          display: none;
+        }
+
+        .caseList {
+          display: flex;
+          flex-direction: column;
+          text-transform: uppercase;
+          position: unset;
+          z-index: 0;
+          gap: 40px;
+
+          .caseTitle {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            width: 100%;
+            color: transparent;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: $white-color;
+            opacity: 1;
+            transition: 0.2s ease-in-out color;
+
+            &:hover {
+              color: $white-color;
+              background-color: transparent;
+            }
+
+            p {
+              margin: unset;
+            }
+
+            &.swiper-pagination-bullet-active {
+              -webkit-text-fill-color: $white-color;
+              background-color: transparent;
+
+              h4 {
+                position: relative;
+
+                &:before {
+                  content: "";
+                  position: absolute;
+                  top: 40%;
+                  width: 120%;
+                  left: -35px;
+                  height: 20px;
+                  opacity: 0.8;
+                  border-radius: 2px;
+                  background: linear-gradient(111.3deg, #9368F5 9.6%, #2E31B3 93.6%);
+                  clip-path: polygon(4% 0, 100% 0%, 96% 100%, 0% 100%);
+                }
+              }
+
+            }
+
+            &.swiper-pagination-bullet {
+              background-color: transparent;
+              height: unset;
+              margin: 0;
+            }
+
+            p {
+              font-size: 25px;
+              -webkit-text-fill-color: $white-color;
+            }
+
+            h4 {
+              font-size: 45px;
+              margin: 0;
+              display: block;
+              text-align: left;
+              @media(max-width: 1250px) {
+                font-size: 35px;
+              }
+              @media(max-width: 1050px) {
+                font-size: 30px;
+              }
+            }
+          }
+
+          @media(max-width: 850px) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .casesLinkFooter {
+      @media (min-width: 851px) {
+        display: none;
+      }
+    }
+  }
+
+}

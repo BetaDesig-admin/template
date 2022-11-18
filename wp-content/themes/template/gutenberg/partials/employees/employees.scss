@@ -1,0 +1,115 @@
+section.employees {
+  margin: $margin-large 0;
+  @media (max-width: 769px) {
+    margin: 125px 0;
+  }
+
+  div.container {
+    position: relative;
+
+    div.singles {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      padding: 0 40px;
+      gap: 100px 0;
+      @media (max-width: 1150px) {
+        padding: unset;
+        gap: 100px 0;
+      }
+      @media (max-width: 769px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px 0;
+      }
+
+      div.single {
+        flex-basis: 33%;
+        padding: 0 20px;
+
+        &:nth-child(6n+4), &:nth-child(6n+5), &:nth-child(6n+6) {
+          transform: translateX(70px);
+          @media (max-width: 1150px) {
+            transform: unset;
+          }
+        }
+
+        @media (max-width: 1150px) {
+          flex-basis: 50%;
+          margin-bottom: unset;
+        }
+        @media (max-width: 769px) {
+          flex-basis: 100%;
+          transform: unset;
+          padding: unset;
+        }
+
+        div.image {
+          display: flex;
+          flex-direction: row;
+          align-items: flex-end;
+          max-width: 390px;
+          max-height: 390px;
+
+          div.employeeImg {
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              display: block;
+              filter: grayscale(10%);
+              -webkit-filter: grayscale(10%);
+            }
+          }
+
+          p.quote {
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            color: $lightblue-color;
+            margin: 0;
+            padding: 0 10px;
+            height: max-content;
+          }
+        }
+
+        div.info {
+          h4.name {
+            font-size: 20px;
+            margin: 40px 0 0 0;
+            font-weight: 600;
+          }
+
+          h5.position {
+            font-size: 20px;
+            margin: 0;
+            font-weight: 200;
+          }
+
+          div.contactInfo {
+            a {
+              display: block;
+              text-decoration: none;
+              font-size: 16px;
+
+              &:first-of-type {
+                margin-top: 25px;
+              }
+            }
+          }
+        }
+
+        @media (max-width: 769px) {
+          &:nth-child(even) {
+            div.image {
+              flex-direction: row-reverse;
+            }
+
+            div.info {
+              padding-left: 40px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

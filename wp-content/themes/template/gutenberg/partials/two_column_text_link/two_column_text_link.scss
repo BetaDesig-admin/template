@@ -1,0 +1,52 @@
+section.twoColumnTextLink {
+  margin: $margin-large 0;
+  @media (max-width: 769px) {
+    margin: 125px 0;
+  }
+
+  div.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    div.textContent {
+      flex-basis: 50%;
+      h1, h2, h3, h4, h5, h6 {
+        margin: 10px 0 35px;
+        line-height: 1.2;
+      }
+
+      div.content {
+        p, li, span {
+          line-height: 1.5;
+          font-size: 16px;
+        }
+
+        a {
+          margin-top: 40px;
+        }
+      }
+
+      h3.header {
+        text-transform: uppercase;
+        font-weight: 300;
+        color: $lightblue-color;
+        margin: unset;
+      }
+    }
+  }
+
+  @media(max-width: 769px) {
+    div.container {
+      flex-direction: column;
+      gap: 25px;
+      align-items: baseline;
+
+      &.text {
+        width: 100%;
+      }
+    }
+  }
+}
+
+
