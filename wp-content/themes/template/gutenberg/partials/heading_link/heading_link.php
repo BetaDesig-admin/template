@@ -1,39 +1,38 @@
 <?php
 // Block med tekst/overskrift og link
 
-// OBS: Mangler preview
+if ( ! $headerText ) {
+    $headerText = get_field( 'header_text' ) ?: '<h2>Skriv overskrift i højre side</h2>';
+}
 
-if (!$headerText) {
-    $headerText = get_field('headerText') ?: '<h2>Udfyld tekst i højre side</h2>';
+if ( ! $link ) {
+    $link = get_field( 'link' );
 }
-if (!$link) {
-    $link = get_field('link');
+
+if ( $is_preview ) {
+    if ( ! $link ) {
+        $link = array(
+            'url'   => '#',
+            'title' => 'Indsæt link'
+        );
+    }
 }
-if (!$factBox) {
-    $factBox = get_field('factBox');
-}
+
 ?>
-<section class="topheader">
+<section class="headingLink">
     <div class="container">
         <div class="header">
             <div class="header__text">
-                <?= $headerText ?>
+				<?= $headerText ?>
             </div>
-            <?php if ($factBox) { ?>
-                <div class="factBox">
-                    <?= $factBox ?>
-                </div>
-            <?php } ?>
         </div>
-
+		<?php if ( $link ) { ?>
+            <div class="btn">
+                <a class="sideBtn" href="<?= $link['url'] ?>">
+					<?= $link['title'] ?>
+					<?= file_get_contents( get_template_directory() . "/images/SVG/arrow.svg" ); ?>
+                </a>
+            </div>
+		<?php } ?>
     </div>
-    <?php if ($link) { ?>
-        <div class="btn">
-            <a class="sideBtn" href="<?= $link['url'] ?>">
-                <?= $link['title'] ?>
-                <?= file_get_contents(get_template_directory() . "/images/svg/arrow_right.svg"); ?>
-            </a>
-        </div>
-    <?php } ?>
-
-</section>
+</section></section>

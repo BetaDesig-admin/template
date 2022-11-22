@@ -1,4 +1,4 @@
-section.topheader {
+section.headingLink {
   margin: $margin-large 0;
   position: relative;
   gap: 25px;
@@ -24,29 +24,16 @@ section.topheader {
         flex-basis: 100%;
       }
 
-
-      h1, h2 {
-        margin: 0;
+      h3.header {
+        color: $lightblue-color;
+        text-transform: uppercase;
+        font-weight: 300;
+        margin: unset;
       }
 
       h1, h2, h3, h4, h5, h6 {
-        position: relative;
-      }
-    }
-
-    div.factBox {
-
-
-      @media(max-width: 769px){
-      margin-top: 40px;
-      }
-      color: $black-color;
-      width: 100%;
-      height: 100%;
-
-      p {
-        margin: 0;
-        font-size: 20px;
+        margin: 10px 0 35px;
+        line-height: 1.2;
       }
     }
   }
@@ -55,13 +42,10 @@ section.topheader {
     width: 100%;
 
     .sideBtn {
-      margin-left: auto;
-      color: $black-color;
-      max-width: 500px;
       display: flex;
       flex-direction: row;
+      justify-content: end;
       align-items: center;
-      justify-content: center;
       text-decoration: none;
       transition: .2s ease-in-out color;
 
@@ -71,9 +55,8 @@ section.topheader {
       }
 
       svg {
-        height: 10px;
-        width: 60px;
         margin-left: 20px;
+        transform: scale(-1);
       }
     }
   }
