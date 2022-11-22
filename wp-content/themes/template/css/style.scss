@@ -16,6 +16,10 @@
 body:not(.wp-admin),
 .acf-block-preview {
 
+  &.fixed {
+    overflow: hidden;
+  }
+
   * {
     box-sizing: border-box;
   }
