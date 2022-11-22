@@ -1,8 +1,8 @@
 .page_not_found {
-  padding: $padding-medium 0;
-  text-align: center;
-  color: $white-color;
-  background-color: $primary-color;
+  margin: $margin-large 0;
+  @media (max-width: 769px) {
+    margin: 125px 0;
+  }
 
   a {
     z-index: 2;
