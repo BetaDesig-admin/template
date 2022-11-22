@@ -1,5 +1,4 @@
 <?php
-
 $features      = get_field( 'features', 'options' );
 $starter       = get_field( 'starter', 'options' );
 $pro           = get_field( 'pro', 'options' );
@@ -42,8 +41,6 @@ $hotels = [ $starter, $pro, $premium ];
 					} ?>
                 </div>
                 <div class="swiper webhotelSlider">
-
-
                     <div class="swiper-wrapper slides">
 						<?php foreach ( $hotels as $hotel ) { ?>
                             <div data-title="<?= $hotel['title'] ?>" class="column swiper-slide">

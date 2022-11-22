@@ -43,26 +43,11 @@ if ( ! $text ) {
 			$mp4  = get_field( 'mp4' );
 			?>
             <div class="video">
-
 				<?php if ( $webm['url'] || $mp4['url'] ) { ?>
                     <video width="100%" height="100%" autoplay playsinline loop muted>
                         <source src="<?= $webm['url'] ?>" type="video/webm">
                         <source src="<?= $mp4['url'] ?>" type="video/mp4">
                     </video>
-                    <!--<video width="100%" height="100%" autoplay loop muted playsinline poster="video_thumbnail/thumbanil.jpg" src="<?= $mp4['url'] ?>">
-                    <source src="<?= $mp4['url'] ?>" type="video/mp4"></source>
-                    <source src="<?= $webm['url'] ?>" type="video/webm"></source>
-                    <source src="<?= bloginfo( 'template_url' ) . "/videos/StartupCentral_2.mov" ?>"
-                            type="video/mov"></source>
-                    </video>-->
-                    <!--<video class=“header-background” width=“600" height=“440” loop autoplay muted playsinline>
-                        <source src='<?= $webm['url'] ?>' type='video/mp4' type='video/webm'/>
-                        <source src='<?= $mp4['url'] ?>' type='video/mp4' type='video/mp4'>
-                    </video>-->
-                    <!--<video preload="metadata"  width="100%" controls autoplay playsinline loop muted>
-                        <source src="<?= $webm['url'] ?>" type="video/webm">
-                        <source src="<?= $mp4['url'] ?>" type="video/mp4">
-                    </video>-->
 				<?php } ?>
             </div>
 		<?php } ?>

@@ -6,7 +6,6 @@ if ($is_preview) {
         $text = '<h2 style="text-align: center">Indtast tekst i dette felt.</h2>';
     }
 }
-
 ?>
 
 <section class="textContent">

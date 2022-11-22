@@ -1,28 +1,28 @@
 <?php
 
-if ( ! $heading ) {
-	$heading = get_field( 'heading' );
+if (!$heading) {
+    $heading = get_field('heading');
 }
-if ( ! $layout ) {
-	$layout = get_field( 'layout' );
+if (!$layout) {
+    $layout = get_field('layout');
 }
-if ( ! $orderBy ) {
-	$orderBy = get_field( 'orderby' );
+if (!$orderBy) {
+    $orderBy = get_field('orderby');
 }
-if ( ! $amount ) {
-	$amount = get_field( 'amount' );
+if (!$amount) {
+    $amount = get_field('amount');
 }
-if ( ! $elements ) {
-	$elements = get_field( 'elements' );
+if (!$elements) {
+    $elements = get_field('elements');
 }
 
-if ( $orderBy === 'ID' ) {
-	$order = 'DESC';
+if ($orderBy === 'ID') {
+    $order = 'DESC';
 } else {
-	$order = 'ASC';
+    $order = 'ASC';
 }
 
-$query = smartWpQuery( $layout, 'cases', $orderBy, $amount, $order, $elements );
+$query = smartWpQuery($layout, 'cases', $orderBy, $amount, $order, $elements);
 ?>
 
 <section class="sliderCases">
@@ -36,18 +36,21 @@ $query = smartWpQuery( $layout, 'cases', $orderBy, $amount, $order, $elements );
             <div class="swiper caseSwiper">
                 <div class="swiper-wrapper caseImages">
 
-					<?php
-					$i = 1;
+                    <?php
+                    $i = 1;
 
-					if ( $query->have_posts() ):
-						while ( $query->have_posts() ): $query->the_post();
-							$image = get_field( 'archive_img', get_the_ID() );
-							$name  = get_field( 'case_name', get_the_ID() );
-							?>
+                    if ($query->have_posts()):
+                        while ($query->have_posts()): $query->the_post();
+                            $image = get_the_post_thumbnail_url();
+                            $name = get_the_title();
+                            if (!$image) {
+                                $image = get_field('image', get_the_ID());
+                            }
+                            ?>
                             <div data-caseindex="0<?= $i ?>" data-casename="<?= $name ?>"
                                  class="swiper-slide">
                                 <a href="<?= get_the_permalink() ?>">
-                                    <img src="<?= $image['url'] ?>"/>
+                                    <img src="<?= $image ?>"/>
                                     <div class="info">
                                         <p>0<?= $i ?>.</p>
                                         <p><?= $name ?></p>
@@ -56,12 +59,12 @@ $query = smartWpQuery( $layout, 'cases', $orderBy, $amount, $order, $elements );
                                 </a>
                             </div>
 
-							<?php
-							$i ++;
-						endwhile;
-						wp_reset_query();
-					endif;
-					?>
+                            <?php
+                            $i++;
+                        endwhile;
+                        wp_reset_query();
+                    endif;
+                    ?>
                 </div>
             </div>
         </div>
