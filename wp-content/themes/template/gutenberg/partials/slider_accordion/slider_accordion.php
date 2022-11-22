@@ -1,9 +1,37 @@
 <?php
+// Slider med emner og tilhørende spørgsmål
+// Mulighed for at tilføje tabeller i svar
+
 $header   = get_field( 'blue_header' );
 $subjects = get_field( 'heading' );
 
-if ( ! $header ) {
-	$header = '<h4>Indtast blå overskrift og emne samt tilhørende spørgsmål</h4>';
+
+if ( $is_preview ) {
+    if ( ! $header ) {
+        $header = 'Indtast blå overskrift og emne samt tilhørende spørgsmål og svar';
+    }
+
+    if ( ! $subjects ) {
+        $subjects = array(
+            array(
+                'subject'   => 'Indtast emne',
+                'questions' => array(
+                    0 => array(
+                        'header' => 'Indtast spørgsmål',
+                        'answer' => '<p>Indtast svaret til spørgmsålet</p>',
+                    ),
+                    1 => array(
+                        'header' => 'Indtast spørgsmål',
+                        'answer' => '<p>Indtast svaret til spørgmsålet</p>',
+                    ),
+                    2 => array(
+                        'header' => 'Indtast spørgsmål',
+                        'answer' => '<p>Indtast svaret til spørgmsålet</p>',
+                    ),
+                ),
+            ),
+        );
+    }
 }
 ?>
 
@@ -11,43 +39,55 @@ if ( ! $header ) {
     <div class="container">
         <h3 class="header"><?= $header ?></h3>
         <div class="wrapper">
-            <div class="swiper-pagination list"></div>
+            <div class="swiper-pagination list">
+                <?php if ( $is_preview && $subjects ) {
+                    foreach ( $subjects as $s ) {
+                        ?>
+                        <div class="subjectTitle swiper-pagination-bullet-active ">
+                            <p>01</p>
+                            <h4><?= $s['subject'] ?></h4></div>
+                        <?php
+                    }
+                }
+                ?>
+            </div>
             <div class="swiper slider">
                 <div class="swiper-wrapper slides">
-					<?php
-					if ( $subjects ) {
-						$i = 1;
+                    <?php
 
-						foreach ( $subjects as $subject ) { ?>
+                    if ( $subjects ) {
+                        $i = 1;
+
+                        foreach ( $subjects as $subject ) { ?>
                             <div data-index="0<?= $i ?>." data-title="<?= $subject['subject'] ?>" class="swiper-slide">
-								<?php foreach ( $subject['questions'] as $question ) {
-									?>
+                                <?php foreach ( $subject['questions'] as $question ) {
+                                    ?>
                                     <div class="single">
                                         <h5 class="question"><?= $question['header'] ?></h5>
                                         <div class="answercont">
                                             <div class="answer"><?= $question['answer'] ?></div>
-											<?php if ( $question['if_table'] === 'table' ) {
-												if ( ! empty ( $question['table'] ) ) { ?>
+                                            <?php if ( $question['if_table'] === 'table' ) {
+                                                if ( ! empty ( $question['table'] ) ) { ?>
                                                     <div class="table">
-														<?php foreach ( $question['table']['body'] as $tr ) { ?>
+                                                        <?php foreach ( $question['table']['body'] as $tr ) { ?>
                                                             <div class="row">
-																<?php foreach ( $tr as $td ) { ?>
-                                                                    <div class="data"><?= nl2br($td['c']) ?></div>
-																<?php } ?>
+                                                                <?php foreach ( $tr as $td ) { ?>
+                                                                    <div class="data"><?= nl2br( $td['c'] ) ?></div>
+                                                                <?php } ?>
                                                             </div>
-														<?php } ?>
+                                                        <?php } ?>
                                                     </div>
-												<?php }
-											} ?>
+                                                <?php }
+                                            } ?>
                                         </div>
                                     </div>
-								<?php } ?>
+                                <?php } ?>
                             </div>
 
-							<?php
-							$i ++;
-						}
-					} ?>
+                            <?php
+                            $i ++;
+                        }
+                    } ?>
                 </div>
             </div>
         </div>

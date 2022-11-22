@@ -1,4 +1,8 @@
 <?php
+// Block med ansatte
+// Bruger smartWpQuery funktionen til at lave en query med enten alle medarbejdere eller bestemte medarbejdere samt hvordan de skal sorteres
+// Sætter 'Foto på vej'-billede ind hvis der ikke er uploadet/valgt billede til en medarbejder
+
 $layout  = get_field( 'layout' );
 $orderBy = get_field( 'orderby' );
 $amount  = get_field( 'amount' );
@@ -16,10 +20,7 @@ $query = smartWpQuery( $layout, 'ansatte', $orderBy, $amount, $order, '' );
 <section class="employees">
     <div class="container">
         <div class="singles">
-			<?php
-			$i = 1;
-
-			if ( $query->have_posts() ):
+			<?php if ( $query->have_posts() ):
 				while ( $query->have_posts() ): $query->the_post();
 					$image    = get_field( 'employee_image', get_the_ID() );
 					$position = get_field( 'employee_position', get_the_ID() );
@@ -48,7 +49,6 @@ $query = smartWpQuery( $layout, 'ansatte', $orderBy, $amount, $order, '' );
                     </div>
 
 					<?php
-					$i ++;
 				endwhile;
 			endif;
 			?>

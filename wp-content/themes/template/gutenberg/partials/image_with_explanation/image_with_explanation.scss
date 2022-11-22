@@ -1,89 +1,96 @@
 section.icons {
-  margin: $margin-large $margin-small;
+  margin: $margin-large 0;
+  @media (max-width: 769px) {
+    margin: 125px 0;
+  }
 
-  > div {
-    display: flex;
-    flex-direction: column;
-
-    div.header {
-      width: 100%;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-      @media(max-width: 950px) {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      div.title {
-        max-width: 60%;
-        @media(max-width: 769px) {
-          max-width: 100%;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-          margin-top: 0;
-        }
-      }
+  div.topText {
+    max-width: 60%;
+    margin-bottom: 50px;
+    @media(max-width: 769px) {
+      max-width: unset;
     }
 
-    div.body {
-      margin-top: 20px;
+    h3.header {
+      color: $primary-color;
+      text-transform: uppercase;
+      font-weight: 300;
+      margin: unset;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      margin: 10px 0 35px;
+      line-height: 1.2;
+    }
+  }
+
+  div.images {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    @media(max-width: 769px) {
+      gap: 40px;
+    }
+
+    div.single {
       display: flex;
-      flex-wrap: wrap;
+      flex-basis: calc(50% - 40px);
       justify-content: space-between;
       align-items: flex-start;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+      @media(max-width: 769px) {
+        flex-basis: 100%;
+        margin-bottom: unset;
+      }
+      @media(max-width: 450px) {
+        flex-direction: column;
+        gap: $margin-small;
+      }
 
-      div.single {
-        display: flex;
-        flex-basis: calc(50% - 40px);
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        @media(max-width: 769px) {
-          flex-basis: 100%;
-          margin-bottom: $margin-small;
+      div.text {
+        flex-basis: calc(60% - 20px);
+        @media(max-width: 1050px) {
+          flex-basis: calc(60% - 10px);
         }
-        @media(max-width: 450px) {
-          flex-direction: column;
-          margin-bottom: unset;
+
+        & > :first-child {
+          margin-top: 0;
         }
-        div.text {
-          flex-basis: calc(70% - 20px);
-          h1, h1, h3, h4, h5, h6 {
-            margin: unset;
-            @media(max-width: 450px) {
-              margin-top: 20px;
-            }
+
+        h1, h1, h3, h4, h5, h6 {
+          margin: unset;
+          @media(max-width: 450px) {
+            margin-top: 20px;
           }
         }
-        div.image {
-          flex-basis: calc(30% - 20px);
-          img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            filter: grayscale(100%);
-            @media(max-width: 450px) {
-              margin: auto;
-              width: 50%;
-            }
+      }
+
+      div.image {
+        flex-basis: calc(40% - 20px);
+        @media(max-width: 1050px) {
+          flex-basis: calc(40% - 10px);
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          display: flex;
+          justify-content: center;
+          //filter: grayscale(100%);
+          @media(max-width: 450px) {
+            margin: auto;
+            width: 50%;
           }
         }
       }
     }
   }
-
 }
 
-.btnContainer {
-  width: 100%;
-  text-align: right;
-}
 
 .acf-block-preview {
   section.icons {

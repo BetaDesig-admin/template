@@ -1,4 +1,8 @@
 <?php
+// Block med tekst/overskrift og link
+
+// OBS: Mangler preview
+
 if (!$headerText) {
     $headerText = get_field('headerText') ?: '<h2>Udfyld tekst i højre side</h2>';
 }

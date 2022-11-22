@@ -23,6 +23,14 @@ section.table {
         line-height: 1.2;
         hyphens: auto;
       }
+
+      h3.header {
+        color: $primary-color;
+        text-transform: uppercase;
+        font-weight: 300;
+        margin: unset;
+      }
+
     }
 
     table {

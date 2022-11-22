@@ -1,39 +1,47 @@
 <?php
-$title = get_field('heading');
-$btn = get_field('btn');
-$images = get_field('images');
+//Block med billeder og tilhørende tekst
+
+$header = get_field( 'header' );
+$text   = get_field( 'heading' );
+$images = get_field( 'images' );
 
 
-if ($is_preview) {
-
-    if (!$title) {
-        $title = '<h2>Test indhold</h2>';
+if ( $is_preview ) {
+    if ( ! $header ) {
+        $header = 'Indtast blå overskrift';
     }
-    if (!$icons) {
-        $icons = array(
+    if ( ! $text ) {
+        $text = '<h2>Indtast overskrift</h2>';
+    }
+    if ( ! $images ) {
+        $images = array(
             array(
-                'icon' => 'time',
-                'text' => '<p>test tekst skift venglist</p>'
+                'image' => array(
+                    'url' => 'https://via.placeholder.com/400x300?text=Upload/vælg+billede',
+                ),
+                'text'  => '<h5>Indtast tekst og formater det</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>'
             ),
             array(
-                'icon' => 'temp',
-                'text' => '<p>test tekst skift venglist</p>'
+                'image' => array(
+                    'url' => 'https://via.placeholder.com/400x300?text=Upload/vælg+billede',
+                ),
+                'text'  => '<h5>Indtast tekst og formater det</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>'
             ),
             array(
-                'icon' => 'share',
-                'text' => '<p>test tekst skift venglist</p>'
+                'image' => array(
+                    'url' => 'https://via.placeholder.com/400x300?text=Upload/vælg+billede',
+                ),
+                'text'  => '<h5>Indtast tekst og formater det</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>'
             ),
             array(
-                'icon' => 'pencil',
-                'text' => '<p>test tekst skift venglist</p>'
-            ),
-            array(
-                'icon' => 'hat',
-                'text' => '<p>test tekst skift venglist</p>'
-            ),
-            array(
-                'icon' => 'assembly',
-                'text' => '<p>test tekst skift venglist</p>'
+                'image' => array(
+                    'url' => 'https://via.placeholder.com/400x300?text=Upload/vælg+billede',
+                ),
+                'text'  => '<h5>Indtast tekst og formater det</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>'
             ),
         );
     }
@@ -43,18 +51,14 @@ if ($is_preview) {
 
 <section class="icons">
     <div class="container">
-        <div class="header">
-            <div class="title">
-                <?= $title ?>
-            </div>
-            <?php if ($btn) { ?>
-                <a href="<?= $btn['url'] ?>" class="btn"><?= $btn['title'] ?: 'See more' ?></a>
-            <?php } ?>
+        <div class="topText">
+            <h3 class="header"><?= $header ?></h3>
+            <?= $text ?>
         </div>
-        <div class="body">
+        <div class="images">
             <?php
-            if ($images):
-                foreach ($images as $image) { ?>
+            if ( $images ):
+                foreach ( $images as $image ) { ?>
                     <div class="single">
                         <div class="image">
                             <img src="<?= $image['image']['url']; ?>" alt="">

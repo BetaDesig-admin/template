@@ -1,4 +1,7 @@
 <?php
+// Tabel med sammenligning af produkter (brugt til sammenligning af designpakker på savantsoftware.dk/startup-central
+// Mulighed for at tilføje tooltips til alle celler
+// UDEN kolonne i venstre side til featurenavne
 
 $designOptions = get_field( 'designpakker', 'options' );
 $text          = get_field( 'text', 'options' );

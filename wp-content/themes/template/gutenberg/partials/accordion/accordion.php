@@ -1,4 +1,6 @@
 <?php
+// Accorion/FAQ hvor der er mulighed for at vælge om spørgsmålet er tekst- eller videobaseret
+
 $questions = get_field('questions');
 $text = get_field('heading');
 
@@ -26,7 +28,7 @@ if ($is_preview) {
 
 ?>
 
-<section class="accordian">
+<section class="accordion">
     <div class="container">
 
         <div class="header">

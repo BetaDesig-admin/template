@@ -1,4 +1,7 @@
 <?php
+// Slider til posttypes
+// Laver en query med funktionen smartWpQuery
+// Henter valgt layout, antal, sortering og eventuelle valgte elementer (hvis layout er 'single')
 
 if (!$heading) {
     $heading = get_field('heading');
@@ -14,6 +17,12 @@ if (!$amount) {
 }
 if (!$elements) {
     $elements = get_field('elements');
+}
+
+if ( $is_preview ) {
+    if ( ! $heading ) {
+        $heading = 'Indtast blå overskrift';
+    }
 }
 
 if ($orderBy === 'ID') {

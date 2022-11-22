@@ -307,7 +307,7 @@ section.two_column {
             }
 
             .wpcf7-not-valid-tip {
-              color: $lightblue-color;
+              color: $primary-color;
             }
 
             label {
@@ -333,7 +333,7 @@ section.two_column {
                   &:focus-visible {
                     outline: none;
                     border: none;
-                    border-bottom: 2px solid $lightblue-color !important;
+                    border-bottom: 2px solid $primary-color !important;
                   }
                 }
 
@@ -393,7 +393,7 @@ section.two_column {
       h3.header {
         text-transform: uppercase;
         font-weight: 300;
-        color: $lightblue-color;
+        color: $primary-color;
         margin: unset;
       }
     }

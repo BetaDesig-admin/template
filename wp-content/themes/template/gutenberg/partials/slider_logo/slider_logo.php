@@ -1,59 +1,60 @@
 <?php
-$mode = get_field('layout');
-$content = get_field('content');
-$image = get_field('image');
-$heading = get_field('heading');
+// Block med logoer og tilhørende overskrift og tekst
+
+if ( $is_preview ) {
+    if ( ! $testimonials ) {
+        $testimonials = array(
+            array(
+                'logo'   => array(
+                    'url' => 'https://via.placeholder.com/400x300?text=Upload/vælg+billede',
+                ),
+                'heading' => 'Indtast overskrift',
+                'content' => 'Udfyld tekst',
+            ),
+            array(
+                'logo'   => array(
+                    'url' => 'https://via.placeholder.com/400x300?text=Upload/vælg+billede',
+                ),
+                'heading' => 'Indtast overskrift',
+                'content' => 'Udfyld tekst',
+            ),
+            array(
+                'logo'   => array(
+                    'url' => 'https://via.placeholder.com/400x300?text=Upload/vælg+billede',
+                ),
+                'heading' => 'Indtast overskrift',
+                'content' => 'Udfyld tekst',
+            ),
+        );
+    }
+    if ( ! $header ) {
+        $header = 'Indtast blå overskrift i dette felt.';
+    }
+    if ( ! $heading ) {
+        $heading = '<h2>Indtast overskrift i dette felt.</h2>';
+    }
+}
 ?>
 
     <section class="companys">
         <div class="container swiper reseller">
-            <?php if ($heading) { ?>
+            <?php if ( $heading ) { ?>
                 <div class="heading">
+                    <h3 class="header"><?= $header ?></h3>
                     <?= $heading ?>
                 </div>
             <?php } ?>
             <div class="swiper-wrapper">
-                <?php
-                if ($content === 'logo') {
-
-                    $args = array(
-                        'post_type' => 'company',
-                        'post_status' => 'publish',
-                        'posts_per_page' => -1,
-                    );
-
-                    if ($mode === 'single') {
-                        $singles = get_field('singles');
-                        $args['post__in'] = $singles;
-                    }
-                    $loop = new WP_Query($args);
-
-                    while ($loop->have_posts()) : $loop->the_post();
-                        $postID = get_the_ID();
-                        $logo = get_field('logo', $postID);
-                        $href = get_field('link', $postID);
-                        $active = get_field('active', $postID);
-
-
-                        if ($active === 'active') {
-                            ?>
-                            <div class="single swiper-slide">
-                                <img src="<?= $logo['url'] ?>" alt="logo">
-                            </div>
-                            <?php
-                        }
-                    endwhile;
-                    wp_reset_postdata();
-                } else {
-                    $testimonials = get_field('testimonials');
-                    foreach ($testimonials as $test) {
-                        ?>
-                        <div class="single swiper-slide">
-                            <p class="heading"><strong><?= $test['heading'] ?></strong></p>
-                            <p><?= $test['content'] ?></p>
+                <?php foreach ( $testimonials as $testimonial ) {
+                    ?>
+                    <div class="single swiper-slide">
+                        <div class="image">
+                            <img src="<?= $testimonial['logo']['url'] ?>" alt="">
                         </div>
-                        <?php
-                    }
+                        <p class="heading"><strong><?= $testimonial['heading'] ?></strong></p>
+                        <p><?= $testimonial['content'] ?></p>
+                    </div>
+                    <?php
                 }
                 ?>
             </div>
@@ -66,7 +67,7 @@ $heading = get_field('heading');
             spaceBetween: 100,
             //centeredSlides: true,
             autoplay: {
-                delay: 5000,
+                delay: 4000,
             },
             breakpoints: {
                 // when window width is >= 320px

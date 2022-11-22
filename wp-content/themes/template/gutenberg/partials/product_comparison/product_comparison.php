@@ -1,4 +1,7 @@
 <?php
+// Tabel med sammenligning af produkter (brugt til sammenligning af webhotelpakker på savantsoftware.dk/services/hosting-webhotel
+// MED kolonne i venstre side til featurenavne, hvor der er mulighed for at tilføje tooltips
+
 $features      = get_field( 'features', 'options' );
 $starter       = get_field( 'starter', 'options' );
 $pro           = get_field( 'pro', 'options' );

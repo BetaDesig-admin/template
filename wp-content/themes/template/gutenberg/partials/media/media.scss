@@ -1,5 +1,8 @@
 section.image, section.video {
-  margin: $margin-large $margin-small;
+  margin: $margin-large 0;
+  @media (max-width: 769px) {
+    margin: 125px 0;
+  }
 
   div.container {
     img {

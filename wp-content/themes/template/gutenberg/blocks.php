@@ -27,7 +27,7 @@ function allow_blocks($blocks, $post)
         'acf/twocolumtextlink',
         'acf/table',
         'acf/productcomparison',
-        'acf/basicproductcomparison',
+        'acf/productcomparisonbasic',
     ];
 
     return $blocks;
@@ -377,9 +377,9 @@ function register_blocks()
     ]);
 
     acf_register_block([
-        'name' => 'basicproductcomparison',
+        'name' => 'productcomparisonbasic',
         'title' => 'Basic produktsammenligning',
-        'render_template' => __DIR__ . '/partials/basic_product_comparison/basic_product_comparison.php',
+        'render_template' => __DIR__ . '/partials/product_comparison_basic/product_comparison_basic.php',
         'category' => 'layout',
         'icon' => 'admin-appearance',
         'mode' => 'preview',

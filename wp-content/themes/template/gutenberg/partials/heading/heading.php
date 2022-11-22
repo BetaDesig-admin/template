@@ -1,9 +1,25 @@
 <?php
+// Block med tekst/overskrift
+// Mulighed for at vælge mellem 2 slags tekster (fade eller changing) og om det skal indeholde en H1 eller ej
+// Brugt på Savants til eksempelvis 'Privatdata' siden og 'Betingelser' siden, hvor der har manglet H1
+
 $kind        = get_field( 'kind' );
 $ifDifferent = get_field( 'if_different_text' );
 $ifHeading   = get_field( 'if_heading' );
 $ifSpacing   = get_field( 'if_spacing' );
 
+if ( $is_preview ) {
+
+    if ( ! $kind ) {
+        $kind = 'fade';
+    }
+    if ( ! $ifDifferent ) {
+        $ifDifferent = 'same';
+    }
+    if ( ! $ifHeading ) {
+        $ifHeading = 'text';
+    }
+}
 
 if ( $ifDifferent === 'same' ) {
 	$heading = get_field( 'heading' );
@@ -12,12 +28,6 @@ if ( $ifDifferent === 'same' ) {
 		$headingDifferent = get_field( 'heading_different_fade' );
 	} else {
 		$headingDifferent = get_field( 'heading_different_changing' );
-	}
-}
-
-if ( $is_preview ) {
-	if ( ! $heading ) {
-		$heading = 'Indtast tekst';
 	}
 }
 

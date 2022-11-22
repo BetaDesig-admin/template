@@ -1,9 +1,12 @@
 section.topheader {
-  margin: $margin-large $margin-small;
+  margin: $margin-large 0;
   position: relative;
   gap: 25px;
   display: flex;
   flex-direction: column;
+  @media (max-width: 769px) {
+    margin: 125px 0;
+  }
 
   div.header {
     display: flex;

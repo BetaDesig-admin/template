@@ -1,5 +1,15 @@
 section.contact_info {
-  margin: $margin-large $margin-small;
+  margin: $margin-large 100px;
+  @media (max-width: 1150px) {
+    margin: $margin-large 50px;
+  }
+  @media (max-width: 769px) {
+    margin: 125px 50px;
+  }
+  @media (max-width: 450px) {
+    margin: 125px 25px;
+  }
+
   div.container {
     article.body {
       display: flex;
@@ -25,19 +35,19 @@ section.contact_info {
             }
 
             p {
-              a {
-                &:hover {
-                  border-bottom: 1px solid $primary-color;
-                }
-              }
+              font-size: 16px;
             }
 
             a {
-              text-decoration: none
+              text-decoration: none;
+              font-size: 16px;
+              font-weight: 400;
             }
 
             .socials {
-              color: $black-color;
+              color: $white-color;
+              display: flex;
+              gap: 5px;
             }
           }
         }

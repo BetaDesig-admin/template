@@ -65,7 +65,7 @@ section.journey {
               h3.header {
                 text-transform: uppercase;
                 font-weight: 300;
-                color: $lightblue-color;
+                color: $primary-color;
                 margin: unset;
               }
               div.journeyNav {
@@ -140,7 +140,7 @@ section.journey {
               position: relative;
               text-decoration: underline;
               text-underline-position: under;
-              color: $lightblue-color;
+              color: $primary-color;
             }
 
           }
@@ -165,7 +165,7 @@ section.journey {
             margin: 0;
             display: block;
             text-align: left;
-            color: $lightblue-color;
+            color: $primary-color;
             font-weight: 400;
             @media (max-width: 769px) {
               font-size: 20px;
@@ -176,6 +176,14 @@ section.journey {
           }
         }
       }
+    }
+  }
+}
+
+.acf-block-preview {
+  section.journey {
+    div.swiper-pagination {
+      transform: translateX(50px);
     }
   }
 }

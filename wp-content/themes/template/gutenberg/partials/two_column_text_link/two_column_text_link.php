@@ -6,13 +6,22 @@ $text   = get_field( 'text' );
 $link   = get_field( 'link' );
 
 if ( $is_preview ) {
-	if ( ! $link ) {
-		$link = '<p>Indtast link</p>';
-	}
+    if ( ! $header ) {
+        $header = 'Indtast blå overskrift';
+    }
 
-	if ( ! $text ) {
-		$text = '<h2 style="text-align: center">Indtast tekst i dette felt.</h2>';
-	}
+    if ( ! $text ) {
+        $text = '<h2>Indtast overskrift og tekst og formater det</h2>
+                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>';
+    }
+
+    if ( ! $link ) {
+        $link = array(
+            'target' => '_self',
+            'title'  => 'Link tekst',
+            'url'    => '#',
+        );
+    }
 }
 
 ?>
@@ -22,7 +31,7 @@ if ( $is_preview ) {
         <div class="textContent">
             <h3 class="header"><?= $header ?></h3>
             <div class="content">
-				<?= $text ?>
+                <?= $text ?>
             </div>
         </div>
         <div class="link">

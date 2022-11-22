@@ -8,7 +8,7 @@ section.sliderAccordion {
     h3.header {
       text-transform: uppercase;
       font-weight: 300;
-      color: $lightblue-color;
+      color: $primary-color;
       margin: unset;
     }
 
@@ -36,7 +36,7 @@ section.sliderAccordion {
 
           .swiper-slide {
             .question {
-              border-bottom: 1px solid $lightblue-color;
+              border-bottom: 1px solid $primary-color;
               padding-bottom: 25px;
               padding-left: 50px;
               font-size: 16px;

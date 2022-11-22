@@ -1,4 +1,5 @@
 <?php
+// Block med reference/citat
 $image = get_field('image');
 $quote = get_field('quote');
 $author = get_field('author');
@@ -11,20 +12,20 @@ if ($order === 'image') {
 }
 
 if ($is_preview) {
-    if (!$image['url']) {
-        $image['url'] = 'https://via.placeholder.com/500x500';
+    if ( ! $image['url'] ) {
+        $image['url'] = 'https://via.placeholder.com/400x250?text=Upload/vælg+billede';
     }
-    if (!$quote) {
-        $quote = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent luctus nulla lacus, mattis aliquet nisi cursus eget. Phasellus eget velit tristique, dignissim leo ut, pharetra risus. Integer augue massa,';
+    if ( ! $quote ) {
+        $quote = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent luctus nulla lacus, mattis aliquet nisi cursus eget. Phasellus eget velit tristique, dignissim leo ut, pharetra risus.';
     }
-    if(!$author) {
+    if ( ! $author ) {
         $author = 'Author guy';
     }
 }
 
 ?>
 
-<section class="qoute">
+<section class="quote">
     <div class="container">
         <?php if ($image) { ?>
             <div class="image <?= $textOrder ?> <?= $format ?>">

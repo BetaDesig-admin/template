@@ -1,67 +1,57 @@
 <?php
-$layout = get_field('layout');
-$slides = get_field('slides');
-$orange = get_field('orange');
+// Block med billede-slider
+// Mulighed for at indtaste beskrivelse til billederne
 
-$active = '';
-if ($orange) {
-    $active = 'orange';
-}
+if ( $is_preview ) {
+    if ( ! $header ) {
+        $header = 'Indtast blå overskrift';
+    }
 
-if ($layout !== 'content') {
-    $heading = get_field('heading');
-}
+    if ( ! $heading ) {
+        $heading = '<h2>Indtast tekst og formater det</h2>';
+    }
 
-
-if (!$slides) {
-    $slides = array(
-        array(
-            'image' => array(
-                'url' => 'https://via.placeholder.com/400x300',
+    if ( ! $slides ) {
+        $slides = array(
+            array(
+                'image'   => array(
+                    'url' => 'https://via.placeholder.com/400x300?text=Upload/vælg+billede',
+                ),
+                'content' => 'Udfyld tekst',
             ),
-            'content' => 'Test indhold udfyld venglist',
-        ),
-        array(
-            'image' => array(
-                'url' => 'https://via.placeholder.com/400x300',
+            array(
+                'image'   => array(
+                    'url' => 'https://via.placeholder.com/400x300?text=Upload/vælg+billede',
+                ),
+                'content' => 'Udfyld tekst',
             ),
-            'content' => 'Test indhold udfyld venglist',
-        ),
-        array(
-            'image' => array(
-                'url' => 'https://via.placeholder.com/400x300',
+            array(
+                'image'   => array(
+                    'url' => 'https://via.placeholder.com/400x300?text=Upload/vælg+billede',
+                ),
+                'content' => 'Udfyld tekst',
             ),
-            'content' => 'Test indhold udfyld venglist',
-        ),
-    );
+        );
+    }
 }
-
 
 ?>
 
-
-<section class="slider <?= $layout ?>">
-    <?php if ($layout === 'content') { ?>
-    <div class="container">
-        <?php } ?>
-
-
-        <?php if ($layout !== 'content') { ?>
+<section class="slider">
+    <div class="container <?= $layout ?> <?php if ( $layout != 'content' ) { ?>toEdge left<?php } ?>">
+        <?php if ( $heading ) { ?>
             <div class="header">
+                <h3 class="header"><?= $header ?></h3>
                 <?= $heading ?>
-                <div class="navigation">
-                    <div class="swiper-button-prev-custom"><</div>
-                    <div class="swiper-button-next-custom">></div>
-                </div>
             </div>
         <?php } ?>
-
         <div class="swiper slides <?= $layout ?>">
             <div class="swiper-wrapper">
-                <?php foreach ($slides as $slide) { ?>
+                <?php foreach ( $slides as $slide ) { ?>
                     <div class="single swiper-slide">
-                        <div class="img <?= $active ?>" style="background-image: url(<?= $slide['image']['url'] ?>)"></div>
-                        <!--                        <img src="--><? //= $slide['image']['url'] ?><!--">-->
+                        <div class="image">
+                            <img src="<?= $slide['image']['url'] ?>" alt="">
+                        </div>
                         <div class="content">
                             <p><em><?= $slide['content'] ?> </em></p>
                         </div>
@@ -69,44 +59,36 @@ if (!$slides) {
                 <?php } ?>
             </div>
 
-            <?php if ($layout === 'content') { ?>
-                <div class="navigation">
-                    <div class="swiper-button-prev-custom"><</div>
-                    <div class="swiper-button-next-custom"><</div>
-                </div>
-            <?php } ?>
+            <div class="navigation">
+                <div class="swiper-button-prev-custom"><?= file_get_contents( get_template_directory() . "/images/SVG/arrow.svg" ); ?></div>
+                <div class="swiper-button-next-custom"><?= file_get_contents( get_template_directory() . "/images/SVG/arrow.svg" ); ?></div>
+            </div>
         </div>
-
-
-        <?php if ($layout === 'content') { ?>
     </div>
-<?php } ?>
-
-
 </section>
 
 
 <script>
     var gallerySwiper = new Swiper(".swiper.slides.special", {
         loop: true,
+        slidesPerView: 1.2,
+        spaceBetween: 20,
         navigation: {
             nextEl: ".swiper-button-next-custom",
             prevEl: ".swiper-button-prev-custom",
         },
         breakpoints: {
-            // when window width is >= 480px
-            300: {
-                slidesPerView: 1,
-                spaceBetween: 0
+            500: {
+                slidesPerView: 1.2,
+                spaceBetween: 20
             },
-            // when window width is >= 640px
-            650: {
-                slidesPerView: 2,
+            769: {
+                slidesPerView: 1.5,
                 spaceBetween: 40
             },
             1025: {
-                slidesPerView: 2.40,
-                spaceBetween: 110,
+                slidesPerView: 2.4,
+                spaceBetween: 50,
             }
         }
 
@@ -120,12 +102,10 @@ if (!$slides) {
         },
 
         breakpoints: {
-            // when window width is >= 480px
             300: {
                 slidesPerView: 1,
                 spaceBetween: 0
             },
-            // when window width is >= 640px
             950: {
                 slidesPerView: 2,
                 spaceBetween: 50,
