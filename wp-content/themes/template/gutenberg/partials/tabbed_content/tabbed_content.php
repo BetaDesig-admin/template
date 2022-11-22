@@ -7,7 +7,7 @@ $journey = get_field( 'journey' );
 
 if ( $is_preview ) {
     if ( ! $header ) {
-        $header = 'Indtast blå overskrift';
+        $header = 'Indtast lille overskrift';
     }
 
     if ( ! $journey ) {

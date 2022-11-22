@@ -1,10 +1,14 @@
 <?php
-// Accorion/FAQ hvor der er mulighed for at vælge om spørgsmålet er tekst- eller videobaseret
+// Accordion/FAQ hvor der er mulighed for at vælge om spørgsmålet er tekst- eller videobaseret
 
 $questions = get_field('questions');
 $text = get_field('heading');
+$header = get_field('header');
 
 if ($is_preview) {
+    if (!$header) {
+        $header = 'Indtast lille overskrift';
+    }
     if (!$text) {
         $text = '<h2>Tilføj spørgsmål i højre side</h2>';
     }
@@ -32,6 +36,7 @@ if ($is_preview) {
     <div class="container">
 
         <div class="header">
+            <h3 class="header"><?= $header ?></h3>
             <?= $text ?>
         </div>
         <div class="questions">

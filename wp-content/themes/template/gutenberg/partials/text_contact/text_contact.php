@@ -11,7 +11,7 @@ $contactEmail  = get_field( 'contact_email' );
 
 if ( $is_preview ) {
     if ( ! $header ) {
-        $header = 'Indtast blå overskrift';
+        $header = 'Indtast lille overskrift';
     }
     if ( ! $text ) {
         $text = '<h2>Indtast overskrift/tekst og formater det</h2>
@@ -26,7 +26,7 @@ if ( $is_preview ) {
     }
 
     if ( ! $contactHeader ) {
-        $contactHeader = 'Lille blå overskrift';
+        $contactHeader = 'Lille lille overskrift';
     }
     if ( ! $contactName ) {
         $contactName = 'Kontaktperson navn';

@@ -7,7 +7,7 @@ $link   = get_field( 'link' );
 
 if ( $is_preview ) {
     if ( ! $header ) {
-        $header = 'Indtast blå overskrift';
+        $header = 'Indtast lille overskrift';
     }
 
     if ( ! $text ) {

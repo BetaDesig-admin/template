@@ -28,7 +28,7 @@ if ( $is_preview ) {
         );
     }
     if ( ! $header ) {
-        $header = 'Indtast blå overskrift i dette felt.';
+        $header = 'Indtast lille overskrift i dette felt.';
     }
     if ( ! $heading ) {
         $heading = '<h2>Indtast overskrift i dette felt.</h2>';

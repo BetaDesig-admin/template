@@ -8,7 +8,7 @@ $subjects = get_field( 'heading' );
 
 if ( $is_preview ) {
     if ( ! $header ) {
-        $header = 'Indtast blå overskrift og emne samt tilhørende spørgsmål og svar';
+        $header = 'Indtast lille overskrift og emne samt tilhørende spørgsmål og svar';
     }
 
     if ( ! $subjects ) {

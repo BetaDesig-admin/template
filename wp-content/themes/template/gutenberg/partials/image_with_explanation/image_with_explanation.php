@@ -8,7 +8,7 @@ $images = get_field( 'images' );
 
 if ( $is_preview ) {
     if ( ! $header ) {
-        $header = 'Indtast blå overskrift';
+        $header = 'Indtast lille overskrift';
     }
     if ( ! $text ) {
         $text = '<h2>Indtast overskrift</h2>';

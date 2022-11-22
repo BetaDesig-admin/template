@@ -9,7 +9,7 @@ $footer = get_field( 'table_footer' );
 
 if ( $is_preview ) {
     if ( ! $header ) {
-        $header = 'Indtast blå overskrift';
+        $header = 'Indtast lille overskrift';
     }
     if ( ! $text ) {
         $text = '<h2>Indtast tekst og formater det</h2>

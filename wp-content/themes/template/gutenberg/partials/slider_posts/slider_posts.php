@@ -21,7 +21,7 @@ if (!$elements) {
 
 if ( $is_preview ) {
     if ( ! $heading ) {
-        $heading = 'Indtast blå overskrift';
+        $heading = 'Indtast lille overskrift';
     }
 }
 

@@ -21,7 +21,7 @@ if ( $order === 'video' ) {
 
 if ( $is_preview ) {
     if (!$header) {
-        $header = 'Indtast blå header';
+        $header = 'Indtast lille header';
     }
 
     if ( ! $videoLayout ) {

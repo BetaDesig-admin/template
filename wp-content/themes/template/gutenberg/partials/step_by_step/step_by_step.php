@@ -11,7 +11,7 @@ $link        = get_field( 'link' );
 
 if ( $is_preview ) {
     if ( ! $header ) {
-        $header = 'Indtast blå overskrift';
+        $header = 'Indtast lille overskrift';
     }
     if ( ! $heading ) {
         $heading = '<h2>Indtast overskrift i feltet til højre og vælg layout</h2>';
