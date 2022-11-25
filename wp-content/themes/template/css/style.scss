@@ -1,5 +1,8 @@
 @import "import/variables";
 
+html {
+  scroll-behavior: smooth;
+}
 
 .mce-text {
   font-size: 16px !important;
