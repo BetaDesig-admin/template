@@ -1,0 +1,500 @@
+[
+    {
+        "key": "group_6273994b4936f",
+        "title": "Tekst og billede [BLOCK]",
+        "fields": [
+            {
+                "key": "field_627399817bcbc",
+                "label": "Rækkefølge",
+                "name": "order",
+                "aria-label": "",
+                "type": "button_group",
+                "instructions": "Vælg hvad der skal vises til venstre",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "33",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "image": "Billede",
+                    "text": "tekst"
+                },
+                "default_value": "",
+                "return_format": "value",
+                "allow_null": 0,
+                "layout": "vertical"
+            },
+            {
+                "key": "field_632325133b374",
+                "label": "Tekst eller kontaktformular?",
+                "name": "contact_form",
+                "aria-label": "",
+                "type": "button_group",
+                "instructions": "Vælg om der skal være kontaktformular eller tekst",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "33",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "text": "Tekst",
+                    "form": "Kontaktformular"
+                },
+                "default_value": "",
+                "return_format": "value",
+                "allow_null": 0,
+                "layout": "vertical"
+            },
+            {
+                "key": "field_63232d98d1a58",
+                "label": "Bredde",
+                "name": "width",
+                "aria-label": "",
+                "type": "button_group",
+                "instructions": "Vælg om billedet skal gå til kant eller container",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "33",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "container": "Container",
+                    "toEdge": "Til kanten"
+                },
+                "default_value": "",
+                "return_format": "value",
+                "allow_null": 0,
+                "layout": "vertical"
+            },
+            {
+                "key": "field_627399617bcba",
+                "label": "Billede",
+                "name": "image",
+                "aria-label": "",
+                "type": "image",
+                "instructions": "Vælg\/upload et billede",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "20",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array",
+                "preview_size": "medium",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            },
+            {
+                "key": "field_632c4c0b6317d",
+                "label": "Skal billedet roteres på mobil?",
+                "name": "img_rotate",
+                "aria-label": "",
+                "type": "button_group",
+                "instructions": "Vælg om billedet skal roteres på mobil. \r\n\r\nLave\/liggende billeder kan ikke roteres på mobil.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "30",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "noRotate": "Skal ikke roteres",
+                    "rotate": "Skal roteres"
+                },
+                "default_value": "",
+                "return_format": "value",
+                "allow_null": 0,
+                "layout": "vertical"
+            },
+            {
+                "key": "field_634d56a1b30cd",
+                "label": "Skal billedet gøres smallere på mobil?",
+                "name": "img_small",
+                "aria-label": "",
+                "type": "button_group",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_632c4c0b6317d",
+                            "operator": "==",
+                            "value": "noRotate"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "30",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "noSmall": "Skal ikke gøres smallere",
+                    "small": "Skal gøres smallere"
+                },
+                "default_value": "",
+                "return_format": "value",
+                "allow_null": 0,
+                "layout": "vertical"
+            },
+            {
+                "key": "field_633426772018f",
+                "label": "Venstre- eller højrejusteret tekst",
+                "name": "text_align",
+                "aria-label": "",
+                "type": "button_group",
+                "instructions": "Vælg om teksten skal være venstre- eller højrejusteret",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "0",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "left": "Venstre",
+                    "right": "Højre"
+                },
+                "default_value": "",
+                "return_format": "value",
+                "allow_null": 0,
+                "layout": "vertical"
+            },
+            {
+                "key": "field_632324db3b372",
+                "label": "Blå header",
+                "name": "header",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Indtast tekst til blå overskrift",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_627399707bcbb",
+                "label": "Tekst",
+                "name": "text",
+                "aria-label": "",
+                "type": "wysiwyg",
+                "instructions": "Indtast og formatter en kort tekst",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_632325133b374",
+                            "operator": "==",
+                            "value": "text"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 1,
+                "delay": 0
+            },
+            {
+                "key": "field_63242e1352646",
+                "label": "Kontaktformular overskrift",
+                "name": "contact_header",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_632325133b374",
+                            "operator": "==",
+                            "value": "form"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_632427cc443fa",
+                "label": "Kontaktformular",
+                "name": "contact",
+                "aria-label": "",
+                "type": "acf_cf7",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_632325133b374",
+                            "operator": "==",
+                            "value": "form"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "key": "field_632c146a391c3",
+                "label": "Tekst i siden",
+                "name": "side_text",
+                "aria-label": "",
+                "type": "button_group",
+                "instructions": "Vælg om der skal være tekst i siden",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "25",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "noText": "Ingen tekst",
+                    "text": "Tekst"
+                },
+                "default_value": "",
+                "return_format": "value",
+                "allow_null": 0,
+                "layout": "vertical"
+            },
+            {
+                "key": "field_632c150d391c4",
+                "label": "Tekst over eller under billede",
+                "name": "text_placement",
+                "aria-label": "",
+                "type": "button_group",
+                "instructions": "Vælg om teksten skal være over eller under billedet",
+                "required": 1,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_632c146a391c3",
+                            "operator": "==",
+                            "value": "text"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "25",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "over": "Over",
+                    "under": "Under"
+                },
+                "default_value": "",
+                "return_format": "value",
+                "allow_null": 0,
+                "layout": "vertical"
+            },
+            {
+                "key": "field_632c15ab391c5",
+                "label": "Forskellig tekst\/indhold?",
+                "name": "different_content",
+                "aria-label": "",
+                "type": "button_group",
+                "instructions": "Vælg om teksten\/indholdet skal være ens eller forskellig",
+                "required": 1,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_632c146a391c3",
+                            "operator": "==",
+                            "value": "text"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "25",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "single": "Ens",
+                    "multiple": "Forskellig"
+                },
+                "default_value": "",
+                "return_format": "value",
+                "allow_null": 0,
+                "layout": "vertical"
+            },
+            {
+                "key": "field_632c1675391c6",
+                "label": "Tekst",
+                "name": "single_text",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Indtast kort tekst til siden. Jo højere billedet er, jo længere tekst kan der tilføjes",
+                "required": 1,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_632c15ab391c5",
+                            "operator": "==",
+                            "value": "single"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "25",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_632c16bb391c7",
+                "label": "Tekst",
+                "name": "multiple_text",
+                "aria-label": "",
+                "type": "repeater",
+                "instructions": "Tryk 'Add field' og tilføj 3 rækker med kort tekst. Jo højere billedet er, jo længere tekst kan der tilføjes",
+                "required": 1,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_632c15ab391c5",
+                            "operator": "==",
+                            "value": "multiple"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "25",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 3,
+                "max": 3,
+                "layout": "table",
+                "button_label": "Add Row",
+                "sub_fields": [
+                    {
+                        "key": "field_632c1712391c8",
+                        "label": "Tekst",
+                        "name": "singles",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": [
+                            [
+                                {
+                                    "field": "field_632c15ab391c5",
+                                    "operator": "==",
+                                    "value": "multiple"
+                                }
+                            ]
+                        ],
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": "",
+                        "parent_repeater": "field_632c16bb391c7"
+                    }
+                ],
+                "rows_per_page": 20
+            },
+            {
+                "key": "field_634fc5cfca66b",
+                "label": "Ekstra luft under",
+                "name": "spacing",
+                "aria-label": "",
+                "type": "button_group",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_632c146a391c3",
+                            "operator": "==",
+                            "value": "text"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "noSpacing": "Ikke ekstra luft",
+                    "spacing": "Ekstra luft"
+                },
+                "default_value": "",
+                "return_format": "value",
+                "allow_null": 0,
+                "layout": "vertical"
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/twocolumn"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0
+    }
+]

@@ -1,0 +1,159 @@
+[
+    {
+        "key": "group_6200f0265265b",
+        "title": "Slider (billeder) [BLOCK]",
+        "fields": [
+            {
+                "key": "field_6200f02cab394",
+                "label": "Layout",
+                "name": "layout",
+                "aria-label": "",
+                "type": "button_group",
+                "instructions": "Vælg layout",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "content": "Følg indholdet",
+                    "special": "Bryd indholdet"
+                },
+                "allow_null": 0,
+                "default_value": "",
+                "layout": "horizontal",
+                "return_format": "value"
+            },
+            {
+                "key": "field_636903e924ba0",
+                "label": "Blå header",
+                "name": "header",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Indtast tekst til den blå header",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_6200f06dab398",
+                "label": "Overskrift",
+                "name": "heading",
+                "aria-label": "",
+                "type": "wysiwyg",
+                "instructions": "Indtast og formatter en kort overskrift",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 1,
+                "delay": 0
+            },
+            {
+                "key": "field_6200f04aab395",
+                "label": "Slides",
+                "name": "slides",
+                "aria-label": "",
+                "type": "repeater",
+                "instructions": "Opret slides",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 0,
+                "max": 0,
+                "layout": "table",
+                "button_label": "Add Row",
+                "sub_fields": [
+                    {
+                        "key": "field_6200f055ab396",
+                        "label": "Billeder",
+                        "name": "image",
+                        "aria-label": "",
+                        "type": "image",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "array",
+                        "preview_size": "medium",
+                        "library": "all",
+                        "min_width": "",
+                        "min_height": "",
+                        "min_size": "",
+                        "max_width": "",
+                        "max_height": "",
+                        "max_size": "",
+                        "mime_types": "",
+                        "parent_repeater": "field_6200f04aab395"
+                    },
+                    {
+                        "key": "field_6200f05eab397",
+                        "label": "Tekst",
+                        "name": "content",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "Indtast en kort tekst",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": "",
+                        "parent_repeater": "field_6200f04aab395"
+                    }
+                ],
+                "rows_per_page": 20
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/slides"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0
+    }
+]

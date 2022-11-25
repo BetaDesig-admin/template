@@ -1,0 +1,208 @@
+[
+    {
+        "key": "group_63514a2e9a02e",
+        "title": "Slider accordion [BLOCK]",
+        "fields": [
+            {
+                "key": "field_6352603aaa150",
+                "label": "Blå overskrift",
+                "name": "blue_header",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Indtast tekst til blå overskrift og tilføj emner og tilhørende spørgsmål",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_63514a2e2afb8",
+                "label": "Overskrift",
+                "name": "heading",
+                "aria-label": "",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layout": "block",
+                "pagination": 0,
+                "min": 0,
+                "max": 0,
+                "collapsed": "",
+                "button_label": "Add Row",
+                "rows_per_page": 20,
+                "sub_fields": [
+                    {
+                        "key": "field_63514a622afb9",
+                        "label": "Emne",
+                        "name": "subject",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "20",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "parent_repeater": "field_63514a2e2afb8"
+                    },
+                    {
+                        "key": "field_63514aa72afba",
+                        "label": "Spørgsmål",
+                        "name": "questions",
+                        "aria-label": "",
+                        "type": "repeater",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "layout": "table",
+                        "pagination": 0,
+                        "min": 0,
+                        "max": 0,
+                        "collapsed": "",
+                        "button_label": "Add Row",
+                        "rows_per_page": 20,
+                        "sub_fields": [
+                            {
+                                "key": "field_63514abc2afbb",
+                                "label": "Overskrift",
+                                "name": "header",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "maxlength": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": "",
+                                "parent_repeater": "field_63514aa72afba"
+                            },
+                            {
+                                "key": "field_63514ad12afbc",
+                                "label": "Svar",
+                                "name": "answer",
+                                "aria-label": "",
+                                "type": "wysiwyg",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "tabs": "all",
+                                "toolbar": "full",
+                                "media_upload": 1,
+                                "delay": 0,
+                                "parent_repeater": "field_63514aa72afba"
+                            },
+                            {
+                                "key": "field_6356402365847",
+                                "label": "Indeholder svaret en tabel?",
+                                "name": "if_table",
+                                "aria-label": "",
+                                "type": "button_group",
+                                "instructions": "Vælg om svaret skal indeholde en tabel\r\n\r\n(hvis tabellen ikke kommer frem så slå preview til og fra)",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "choices": {
+                                    "noTable": "Ingen tabel",
+                                    "table": "Tabel"
+                                },
+                                "default_value": "",
+                                "return_format": "value",
+                                "allow_null": 0,
+                                "layout": "horizontal",
+                                "parent_repeater": "field_63514aa72afba"
+                            },
+                            {
+                                "key": "field_635641784ac4d",
+                                "label": "Tabel",
+                                "name": "table",
+                                "aria-label": "",
+                                "type": "table",
+                                "instructions": "Udfyld tabellen",
+                                "required": 0,
+                                "conditional_logic": [
+                                    [
+                                        {
+                                            "field": "field_6356402365847",
+                                            "operator": "==",
+                                            "value": "table"
+                                        }
+                                    ]
+                                ],
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "use_header": 2,
+                                "use_caption": 2,
+                                "parent_repeater": "field_63514aa72afba"
+                            }
+                        ],
+                        "parent_repeater": "field_63514a2e2afb8"
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/slideraccordion"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0
+    }
+]

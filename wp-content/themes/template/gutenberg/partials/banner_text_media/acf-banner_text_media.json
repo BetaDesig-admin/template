@@ -1,0 +1,299 @@
+[
+    {
+        "key": "group_635132f2d2295",
+        "title": "Banner med tekst [BLOCK]",
+        "fields": [
+            {
+                "key": "field_63611b8078e1c",
+                "label": "Fade eller skiftende udfyldt",
+                "name": "kind",
+                "aria-label": "",
+                "type": "button_group",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "changing": "Skiftende",
+                    "fade": "Fade"
+                },
+                "default_value": "",
+                "return_format": "value",
+                "allow_null": 0,
+                "layout": "horizontal"
+            },
+            {
+                "key": "field_635132f26828a",
+                "label": "Tekst",
+                "name": "text",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Skriv tekst til banneret",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_635133256828b",
+                "label": "Overskrift eller tekst",
+                "name": "if_heading",
+                "aria-label": "",
+                "type": "button_group",
+                "instructions": "Vælg om banneret skal indeholde h1",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "text": "Tekst",
+                    "heading": "Overskrift"
+                },
+                "default_value": "",
+                "return_format": "value",
+                "allow_null": 0,
+                "layout": "horizontal"
+            },
+            {
+                "key": "field_636123ee8d24f",
+                "label": "Billede eller video?",
+                "name": "media",
+                "aria-label": "",
+                "type": "button_group",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "image": "Billede",
+                    "video": "Video"
+                },
+                "default_value": "",
+                "return_format": "value",
+                "allow_null": 0,
+                "layout": "horizontal"
+            },
+            {
+                "key": "field_6351335f6828c",
+                "label": "Billede",
+                "name": "image",
+                "aria-label": "",
+                "type": "image",
+                "instructions": "Upload billede til banneret, hvis der skal være billede",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_636123ee8d24f",
+                            "operator": "==",
+                            "value": "image"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": "",
+                "preview_size": "medium"
+            },
+            {
+                "key": "field_635136936c145",
+                "label": "Billede placering",
+                "name": "image_placement",
+                "aria-label": "",
+                "type": "button_group",
+                "instructions": "Vælg om billedet skal være foran eller bag teksten",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_636123ee8d24f",
+                            "operator": "==",
+                            "value": "image"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "over": "Foran teksten",
+                    "under": "Bag teksten"
+                },
+                "default_value": "",
+                "return_format": "value",
+                "allow_null": 0,
+                "layout": "horizontal"
+            },
+            {
+                "key": "field_635fe601a6039",
+                "label": "Skal billede være mindre på mobil?",
+                "name": "if_small",
+                "aria-label": "",
+                "type": "button_group",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_636123ee8d24f",
+                            "operator": "==",
+                            "value": "image"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "normal": "Ikke mindre",
+                    "smaller": "Mindre"
+                },
+                "default_value": "",
+                "return_format": "value",
+                "allow_null": 0,
+                "layout": "horizontal"
+            },
+            {
+                "key": "field_636a224f10213",
+                "label": "Video thumbnail",
+                "name": "video_thumbnail",
+                "aria-label": "",
+                "type": "image",
+                "instructions": "Upload thumbnail til videoen",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_636123ee8d24f",
+                            "operator": "==",
+                            "value": "video"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": "",
+                "preview_size": "medium"
+            },
+            {
+                "key": "field_6361251aa426d",
+                "label": "Webm",
+                "name": "webm",
+                "aria-label": "",
+                "type": "file",
+                "instructions": "Upload webm filen",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_636123ee8d24f",
+                            "operator": "==",
+                            "value": "video"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array",
+                "library": "all",
+                "min_size": "",
+                "max_size": "",
+                "mime_types": ""
+            },
+            {
+                "key": "field_6361254ba426e",
+                "label": "MP4",
+                "name": "mp4",
+                "aria-label": "",
+                "type": "file",
+                "instructions": "Upload MP4 filen",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_636123ee8d24f",
+                            "operator": "==",
+                            "value": "video"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array",
+                "library": "all",
+                "min_size": "",
+                "max_size": "",
+                "mime_types": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/textbanner"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0
+    }
+]

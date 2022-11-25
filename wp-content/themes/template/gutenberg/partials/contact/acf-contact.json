@@ -1,0 +1,97 @@
+[
+    {
+        "key": "group_62eb83d70e6e6",
+        "title": "Kontakt [BLOCK]",
+        "fields": [
+            {
+                "key": "field_62eb83e70c204",
+                "label": "Overskrift",
+                "name": "heading",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Indtast en kort overskrift",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Du finder os her",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_6364bf3c46950",
+                "label": "Tekst eller link til Google Maps",
+                "name": "if_maps",
+                "aria-label": "",
+                "type": "button_group",
+                "instructions": "Vælg om adresse skal skrives ud eller om der skal linkes til Google Maps",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "text": "Tekst",
+                    "maps": "Link til Maps"
+                },
+                "default_value": "",
+                "return_format": "value",
+                "allow_null": 0,
+                "layout": "vertical"
+            },
+            {
+                "key": "field_6364c013d243c",
+                "label": "Tekst til link",
+                "name": "link_text",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_6364bf3c46950",
+                            "operator": "==",
+                            "value": "maps"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/contactinfo"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0
+    }
+]

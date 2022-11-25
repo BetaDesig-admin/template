@@ -1,0 +1,278 @@
+[
+    {
+        "key": "group_634569d938052",
+        "title": "Overskrift\/tekst med fade [BLOCK]",
+        "fields": [
+            {
+                "key": "field_634fe46f2afa9",
+                "label": "Fade eller skiftende udfyldt",
+                "name": "kind",
+                "aria-label": "",
+                "type": "button_group",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "fade": "Fade",
+                    "changing": "Skiftende"
+                },
+                "default_value": "",
+                "return_format": "value",
+                "allow_null": 0,
+                "layout": "horizontal"
+            },
+            {
+                "key": "field_634fdfad2afa7",
+                "label": "Ens eller forskelling tekst",
+                "name": "if_different_text",
+                "aria-label": "",
+                "type": "button_group",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "same": "Ens",
+                    "different": "Forskellig"
+                },
+                "default_value": "",
+                "return_format": "value",
+                "allow_null": 0,
+                "layout": "horizontal"
+            },
+            {
+                "key": "field_63469a224fc17",
+                "label": "Tekst eller overskrift (h1)",
+                "name": "if_heading",
+                "aria-label": "",
+                "type": "button_group",
+                "instructions": "Vælg om det skal være tekst eller en overskrift",
+                "required": 1,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_634fdfad2afa7",
+                            "operator": "==",
+                            "value": "same"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "text": "Tekst",
+                    "heading": "Overskrift"
+                },
+                "default_value": "",
+                "return_format": "value",
+                "allow_null": 0,
+                "layout": "horizontal"
+            },
+            {
+                "key": "field_634569e44e15d",
+                "label": "Tekst",
+                "name": "heading",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Indtast meget kort tekst",
+                "required": 1,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_634fdfad2afa7",
+                            "operator": "==",
+                            "value": "same"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_634fe3ae2afa8",
+                "label": "Forskellig tekst",
+                "name": "heading_different_fade",
+                "aria-label": "",
+                "type": "repeater",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_634fdfad2afa7",
+                            "operator": "==",
+                            "value": "different"
+                        },
+                        {
+                            "field": "field_634fe46f2afa9",
+                            "operator": "==",
+                            "value": "fade"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layout": "table",
+                "pagination": 0,
+                "min": 1,
+                "max": 4,
+                "collapsed": "",
+                "button_label": "Add Row",
+                "rows_per_page": 20,
+                "sub_fields": [
+                    {
+                        "key": "field_634fe69b2afaa",
+                        "label": "Tekst",
+                        "name": "text",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "parent_repeater": "field_634fe3ae2afa8"
+                    }
+                ]
+            },
+            {
+                "key": "field_634ff24648f4a",
+                "label": "Forskellig tekst",
+                "name": "heading_different_changing",
+                "aria-label": "",
+                "type": "repeater",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_634fdfad2afa7",
+                            "operator": "==",
+                            "value": "different"
+                        },
+                        {
+                            "field": "field_634fe46f2afa9",
+                            "operator": "==",
+                            "value": "changing"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layout": "table",
+                "pagination": 0,
+                "min": 3,
+                "max": 3,
+                "collapsed": "",
+                "button_label": "Add Row",
+                "rows_per_page": 20,
+                "sub_fields": [
+                    {
+                        "key": "field_634ff24648f4b",
+                        "label": "Tekst",
+                        "name": "text",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "parent_repeater": "field_634ff24648f4a"
+                    }
+                ]
+            },
+            {
+                "key": "field_636cede29c526",
+                "label": "Ekstra luft under tekst",
+                "name": "if_spacing",
+                "aria-label": "",
+                "type": "button_group",
+                "instructions": "Vælg om der skal være efter luft under teksten",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_634fe46f2afa9",
+                            "operator": "==",
+                            "value": "fade"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "noSpacing": "Ingen ekstra luft",
+                    "spacing": "Ekstra luft"
+                },
+                "default_value": "",
+                "return_format": "value",
+                "allow_null": 0,
+                "layout": "vertical"
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/heading"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0
+    }
+]

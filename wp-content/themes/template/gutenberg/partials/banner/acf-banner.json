@@ -1,0 +1,214 @@
+[
+    {
+        "key": "group_62d52e56597e4",
+        "title": "Banner [BLOCK]",
+        "fields": [
+            {
+                "key": "field_62d65d55c97a6",
+                "label": "Billede",
+                "name": "image",
+                "aria-label": "",
+                "type": "image",
+                "instructions": "Vælg\/upload et billede til banner",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": "",
+                "preview_size": "thumbnail"
+            },
+            {
+                "key": "field_6329abe23ba5f",
+                "label": "Samme banner på mobil",
+                "name": "mobil_banner",
+                "aria-label": "",
+                "type": "button_group",
+                "instructions": "Vælg om det skal være det samme billede i banner på mobil",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "1": "Samme banner på mobil",
+                    "0": "Andet banner på mobil"
+                },
+                "allow_null": 0,
+                "default_value": "",
+                "layout": "horizontal",
+                "return_format": "value"
+            },
+            {
+                "key": "field_634e590a3e54d",
+                "label": "Samme banner på skærme over 1600px",
+                "name": "bigscreen_banner",
+                "aria-label": "",
+                "type": "button_group",
+                "instructions": "Vælg om det skal være det samme billede i banner på større skærme",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "1": "Samme banner på stor skærm",
+                    "0": "Andet banner på stor skærm"
+                },
+                "default_value": "",
+                "return_format": "value",
+                "allow_null": 0,
+                "layout": "horizontal"
+            },
+            {
+                "key": "field_6329ac3d3ba60",
+                "label": "Mobil billede",
+                "name": "image_mobile",
+                "aria-label": "",
+                "type": "image",
+                "instructions": "Vælg\/upload et billede til mobil banner",
+                "required": 1,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_6329abe23ba5f",
+                            "operator": "==",
+                            "value": "0"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": "",
+                "preview_size": "medium"
+            },
+            {
+                "key": "field_634e59603e54e",
+                "label": "Stor skærm billede",
+                "name": "image_bigscreen",
+                "aria-label": "",
+                "type": "image",
+                "instructions": "Vælg\/upload et billede til store skærmes banner",
+                "required": 1,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_634e590a3e54d",
+                            "operator": "==",
+                            "value": "0"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": "",
+                "preview_size": "medium"
+            },
+            {
+                "key": "field_633c11a2a176e",
+                "label": "Tekst eller kontaktoplysninger?",
+                "name": "content",
+                "aria-label": "",
+                "type": "button_group",
+                "instructions": "Vælg om der skal være tekst eller kontaktoplysninger på banneret",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "text": "Tekst",
+                    "contact": "Kontaktoplysninger"
+                },
+                "allow_null": 0,
+                "default_value": "",
+                "layout": "horizontal",
+                "return_format": "value"
+            },
+            {
+                "key": "field_62d65d782fe1e",
+                "label": "Tekst",
+                "name": "text",
+                "aria-label": "",
+                "type": "wysiwyg",
+                "instructions": "Indtast og formatter en kort banner tekst",
+                "required": 1,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_633c11a2a176e",
+                            "operator": "==",
+                            "value": "text"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 1,
+                "delay": 0
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/banner"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0
+    }
+]

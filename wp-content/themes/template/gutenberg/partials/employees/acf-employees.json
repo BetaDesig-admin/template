@@ -1,0 +1,241 @@
+[
+    {
+        "key": "group_633d3a3256aa8",
+        "title": "Ansatte [BLOCK]",
+        "fields": [
+            {
+                "key": "field_633d3a3259419",
+                "label": "Layout",
+                "name": "layout",
+                "aria-label": "",
+                "type": "button_group",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "standard": "Standard",
+                    "single": "Enkle"
+                },
+                "allow_null": 0,
+                "default_value": "standard",
+                "layout": "horizontal",
+                "return_format": "value"
+            },
+            {
+                "key": "field_633d3a3259483",
+                "label": "Sorter efter",
+                "name": "orderby",
+                "aria-label": "",
+                "type": "button_group",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "post_title": "Titel",
+                    "ID": "ID"
+                },
+                "allow_null": 0,
+                "default_value": "",
+                "layout": "horizontal",
+                "return_format": "value"
+            },
+            {
+                "key": "field_633d3a32594c1",
+                "label": "Antal",
+                "name": "amount",
+                "aria-label": "",
+                "type": "number",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_633d3a3259419",
+                            "operator": "!=",
+                            "value": "single"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": 1,
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "min": "",
+                "max": "",
+                "step": ""
+            },
+            {
+                "key": "field_633d3a32594fb",
+                "label": "Elementer",
+                "name": "elements",
+                "aria-label": "",
+                "type": "post_object",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_633d3a3259419",
+                            "operator": "==",
+                            "value": "single"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "post_type": [
+                    "ansatte"
+                ],
+                "taxonomy": "",
+                "allow_null": 0,
+                "multiple": 1,
+                "return_format": "id",
+                "ui": 1
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/employees"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": false
+    },
+    {
+        "key": "group_61a77a89e2954",
+        "title": "Ansatte [POST-TYPE]",
+        "fields": [
+            {
+                "key": "field_61a77ab4cded1",
+                "label": "Billede",
+                "name": "employee_image",
+                "aria-label": "",
+                "type": "image",
+                "instructions": "Vælg\/upload et kvadratisk billede af den ansatte",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array",
+                "preview_size": "medium",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            },
+            {
+                "key": "field_61a77b2fcded3",
+                "label": "Stilling",
+                "name": "employee_position",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Indtast medarbejderens stilling",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_6334022d86a9b",
+                "label": "Email adresse",
+                "name": "employee_email",
+                "aria-label": "",
+                "type": "email",
+                "instructions": "Indtast medarbejderen email adresse",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_633d436a6cd30",
+                "label": "Citat",
+                "name": "employee_quote",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Skriv kort citat",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "ansatte"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": false
+    }
+]

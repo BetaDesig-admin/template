@@ -1,0 +1,166 @@
+[
+    {
+        "key": "group_62272cbcb2740",
+        "title": "Billede\/video [BLOCK]",
+        "fields": [
+            {
+                "key": "field_622879caec748",
+                "label": "Layout",
+                "name": "layout",
+                "aria-label": "",
+                "type": "button_group",
+                "instructions": "Vælg hvad content der skal vises",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "image": "Billede",
+                    "video": "Video"
+                },
+                "allow_null": 0,
+                "default_value": "",
+                "layout": "horizontal",
+                "return_format": "value"
+            },
+            {
+                "key": "field_62272cc105dd0",
+                "label": "Billede",
+                "name": "image",
+                "aria-label": "",
+                "type": "image",
+                "instructions": "Vælg\/upload et billede",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_622879caec748",
+                            "operator": "==",
+                            "value": "image"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array",
+                "preview_size": "medium",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            },
+            {
+                "key": "field_622879f0ec749",
+                "label": "Video layout",
+                "name": "videolayout",
+                "aria-label": "",
+                "type": "button_group",
+                "instructions": "Vælg hvad slags video",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_622879caec748",
+                            "operator": "==",
+                            "value": "video"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "youtube": "Youtube",
+                    "file": "Videofil"
+                },
+                "allow_null": 0,
+                "default_value": "",
+                "layout": "horizontal",
+                "return_format": "value"
+            },
+            {
+                "key": "field_62287a1fec74a",
+                "label": "Youtube link",
+                "name": "youtube",
+                "aria-label": "",
+                "type": "url",
+                "instructions": "Indsæt en url fra youtube",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_622879f0ec749",
+                            "operator": "==",
+                            "value": "youtube"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": ""
+            },
+            {
+                "key": "field_62287a3aec74b",
+                "label": "Videofil",
+                "name": "video",
+                "aria-label": "",
+                "type": "file",
+                "instructions": "Vælg videofil",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_622879f0ec749",
+                            "operator": "==",
+                            "value": "file"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array",
+                "library": "all",
+                "min_size": "",
+                "max_size": "",
+                "mime_types": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/image"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": false
+    }
+]
