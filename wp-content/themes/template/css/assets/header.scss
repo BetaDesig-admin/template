@@ -79,7 +79,7 @@ header {
         opacity: 0;
       }
 
-      label {
+      label.menuToggle {
         display: unset;
         z-index: 5;
         padding-right: $padding-xsmall;

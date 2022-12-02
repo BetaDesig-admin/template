@@ -29,7 +29,7 @@ $logo = get_field('logo', 'options');
                 <?= file_get_contents($logo['url']); ?>
             </a>
         </section>
-        <label for="menuToggle">
+        <label class="menuToggle" for="menuToggle">
             <span></span>
             <span></span>
             <span></span>
