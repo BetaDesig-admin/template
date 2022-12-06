@@ -5,11 +5,11 @@
         "fields": [
             {
                 "key": "field_6362219e90ecc",
-                "label": "Blå header",
+                "label": "Lille overskrift",
                 "name": "header",
                 "aria-label": "",
                 "type": "text",
-                "instructions": "Indtast tekst til den blå overskrift",
+                "instructions": "Indtast tekst til den lille overskrift",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -126,7 +126,7 @@
             },
             {
                 "key": "field_6362263111503",
-                "label": "Blå kontakt header",
+                "label": "Kontakt header",
                 "name": "contact_header",
                 "aria-label": "",
                 "type": "text",
@@ -209,7 +209,7 @@
                 {
                     "param": "block",
                     "operator": "==",
-                    "value": "acf\/textcontactinfo"
+                    "value": "acf\/textcontact"
                 }
             ]
         ],

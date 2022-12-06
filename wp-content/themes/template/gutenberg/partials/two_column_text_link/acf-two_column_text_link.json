@@ -49,7 +49,7 @@
                 "name": "link",
                 "aria-label": "",
                 "type": "link",
-                "instructions": "",
+                "instructions": "Indsæt link",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {

@@ -1,7 +1,7 @@
 [
     {
         "key": "group_6336ae861727a",
-        "title": "Case slider [BLOCK]",
+        "title": "Post slider [BLOCK]",
         "fields": [
             {
                 "key": "field_634fbafff437b",
@@ -9,7 +9,7 @@
                 "name": "heading",
                 "aria-label": "",
                 "type": "text",
-                "instructions": "Indtast overskrift for caseslideren",
+                "instructions": "Indtast overskrift for postslideren",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -52,7 +52,7 @@
                 "name": "orderby",
                 "aria-label": "",
                 "type": "button_group",
-                "instructions": "Vælg om der skal sorteres efter titel eller ID",
+                "instructions": "Vælg om posts skal sorteres efter titel eller ID",
                 "required": 1,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -106,7 +106,7 @@
                 "name": "elements",
                 "aria-label": "",
                 "type": "post_object",
-                "instructions": "Vælg 4-5 cases",
+                "instructions": "Vælg 4-5 posts",
                 "required": 0,
                 "conditional_logic": [
                     [
@@ -137,7 +137,7 @@
                 {
                     "param": "block",
                     "operator": "==",
-                    "value": "acf\/casesslider"
+                    "value": "acf\/postslider"
                 }
             ]
         ],

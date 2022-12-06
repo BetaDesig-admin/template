@@ -17,20 +17,6 @@ section.table {
       @media (max-width: 769px) {
         padding: 0 20px;
       }
-
-      h1, h2, h3. h4, h5, h6 {
-        margin: 10px 0 35px;
-        line-height: 1.2;
-        hyphens: auto;
-      }
-
-      h3.header {
-        color: $primary-color;
-        text-transform: uppercase;
-        font-weight: 300;
-        margin: unset;
-      }
-
     }
 
     table {

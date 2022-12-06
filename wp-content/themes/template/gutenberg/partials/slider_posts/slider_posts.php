@@ -1,6 +1,6 @@
 <?php
 // Slider til posttypes
-// Laver en query med funktionen smartWpQuery
+// Laver en query med funktionen smartWpQuery (ændr posttype variablen når funktionen kaldes)
 // Henter valgt layout, antal, sortering og eventuelle valgte elementer (hvis layout er 'single')
 
 if (!$heading) {

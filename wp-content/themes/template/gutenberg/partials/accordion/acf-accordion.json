@@ -5,11 +5,11 @@
         "fields": [
             {
                 "key": "field_637cccc493dd5",
-                "label": "Blå header",
+                "label": "Lille overskrift",
                 "name": "header",
                 "aria-label": "",
                 "type": "text",
-                "instructions": "Indtast tekst til den blå header",
+                "instructions": "Indtast tekst til den lille overskrift",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -167,7 +167,7 @@
                 {
                     "param": "block",
                     "operator": "==",
-                    "value": "acf\/accordian"
+                    "value": "acf\/accordion"
                 }
             ]
         ],

@@ -14,7 +14,7 @@ function allow_blocks($blocks, $post)
         'acf/slides',
         'acf/sliderlogo',
         'acf/postslider',
-        'acf/accordian',
+        'acf/accordion',
         'acf/slideraccordion',
         'acf/tabbedcontent',
         'acf/contact',

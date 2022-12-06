@@ -2,7 +2,7 @@
 // Block med tekst og billede, hvor indholdet er i forskellige tabs
 // Brugt til kunderejse på cleecs-undersiden på Savants: savantsoftware.dk/cleecs
 
-$header  = get_field( 'blue_header' );
+$header  = get_field( 'header' );
 $journey = get_field( 'journey' );
 
 if ( $is_preview ) {

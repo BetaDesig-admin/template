@@ -5,11 +5,11 @@
         "fields": [
             {
                 "key": "field_636905c68ed1f",
-                "label": "Blå header",
+                "label": "Lille overskrift",
                 "name": "header",
                 "aria-label": "",
                 "type": "text",
-                "instructions": "Indtast tekst til blå overskrift",
+                "instructions": "Indtast tekst til den lille overskrift",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {

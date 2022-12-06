@@ -9,7 +9,7 @@
                 "name": "order",
                 "aria-label": "",
                 "type": "button_group",
-                "instructions": "image : Billede\r\ntext : tekst",
+                "instructions": "Vælg rækkefølge",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -55,7 +55,7 @@
                 "name": "video",
                 "aria-label": "",
                 "type": "group",
-                "instructions": "",
+                "instructions": "Upload thumbnail, webm og mp4",
                 "required": 0,
                 "conditional_logic": [
                     [
@@ -79,7 +79,7 @@
                         "name": "thumbnail",
                         "aria-label": "",
                         "type": "image",
-                        "instructions": "Upload thumbnail til videon",
+                        "instructions": "Upload thumbnail til videoen",
                         "required": 0,
                         "conditional_logic": 0,
                         "wrapper": {

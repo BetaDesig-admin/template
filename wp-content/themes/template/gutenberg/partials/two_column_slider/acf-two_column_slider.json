@@ -1,15 +1,15 @@
 [
     {
-        "key": "group_6200f0265265b",
-        "title": "Slider (billeder) [BLOCK]",
+        "key": "group_61d59f07ad77e",
+        "title": "Tekst og slider [BLOCK]",
         "fields": [
             {
-                "key": "field_6200f02cab394",
-                "label": "Layout",
-                "name": "layout",
+                "key": "field_61d59f1176959",
+                "label": "Rækkefølge",
+                "name": "order",
                 "aria-label": "",
                 "type": "button_group",
-                "instructions": "Vælg layout",
+                "instructions": "Vælg rækkefølge",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -18,21 +18,21 @@
                     "id": ""
                 },
                 "choices": {
-                    "content": "Følg indholdet",
-                    "special": "Bryd indholdet"
+                    "slider": "Slider -> Tekst",
+                    "text": "Tekst -> Slider"
                 },
+                "default_value": "text",
+                "return_format": "value",
                 "allow_null": 0,
-                "default_value": "",
-                "layout": "horizontal",
-                "return_format": "value"
+                "layout": "vertical"
             },
             {
-                "key": "field_636903e924ba0",
-                "label": "Lille overskrift",
-                "name": "header",
+                "key": "field_6368c130e708c",
+                "label": "Bredde",
+                "name": "width",
                 "aria-label": "",
-                "type": "text",
-                "instructions": "Indtast tekst til den lille overskrift",
+                "type": "button_group",
+                "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -40,39 +40,22 @@
                     "class": "",
                     "id": ""
                 },
-                "default_value": "",
-                "maxlength": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": ""
-            },
-            {
-                "key": "field_6200f06dab398",
-                "label": "Overskrift",
-                "name": "heading",
-                "aria-label": "",
-                "type": "wysiwyg",
-                "instructions": "Indtast og formatter en kort overskrift",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
+                "choices": {
+                    "container": "Container",
+                    "toEdge": "Til kanten"
                 },
                 "default_value": "",
-                "tabs": "all",
-                "toolbar": "full",
-                "media_upload": 1,
-                "delay": 0
+                "return_format": "value",
+                "allow_null": 0,
+                "layout": "vertical"
             },
             {
-                "key": "field_6200f04aab395",
+                "key": "field_61d59ff47695b",
                 "label": "Slides",
                 "name": "slides",
                 "aria-label": "",
                 "type": "repeater",
-                "instructions": "Opret slides",
+                "instructions": "Opret slides enklevis",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -83,16 +66,17 @@
                 "collapsed": "",
                 "min": 0,
                 "max": 0,
-                "layout": "table",
-                "button_label": "Add Row",
+                "layout": "block",
+                "button_label": "Tilføj slide",
+                "rows_per_page": 20,
                 "sub_fields": [
                     {
-                        "key": "field_6200f055ab396",
-                        "label": "Billeder",
+                        "key": "field_61d5a0147695c",
+                        "label": "Billede",
                         "name": "image",
                         "aria-label": "",
                         "type": "image",
-                        "instructions": "",
+                        "instructions": "Vælg\/Upload et billede",
                         "required": 0,
                         "conditional_logic": 0,
                         "wrapper": {
@@ -110,15 +94,15 @@
                         "max_height": "",
                         "max_size": "",
                         "mime_types": "",
-                        "parent_repeater": "field_6200f04aab395"
+                        "parent_repeater": "field_61d59ff47695b"
                     },
                     {
-                        "key": "field_6200f05eab397",
-                        "label": "Tekst",
-                        "name": "content",
+                        "key": "field_63690614e98db",
+                        "label": "Lille overskrift",
+                        "name": "header",
                         "aria-label": "",
                         "type": "text",
-                        "instructions": "Indtast en kort tekst",
+                        "instructions": "Indtast tekst til den lille overskrift",
                         "required": 0,
                         "conditional_logic": 0,
                         "wrapper": {
@@ -127,14 +111,34 @@
                             "id": ""
                         },
                         "default_value": "",
+                        "maxlength": "",
                         "placeholder": "",
                         "prepend": "",
                         "append": "",
-                        "maxlength": "",
-                        "parent_repeater": "field_6200f04aab395"
+                        "parent_repeater": "field_61d59ff47695b"
+                    },
+                    {
+                        "key": "field_61d59f387695a",
+                        "label": "Tekst",
+                        "name": "text",
+                        "aria-label": "",
+                        "type": "wysiwyg",
+                        "instructions": "Indtast og formatter en kort tekst",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "tabs": "all",
+                        "toolbar": "full",
+                        "media_upload": 1,
+                        "delay": 0,
+                        "parent_repeater": "field_61d59ff47695b"
                     }
-                ],
-                "rows_per_page": 20
+                ]
             }
         ],
         "location": [
@@ -142,7 +146,7 @@
                 {
                     "param": "block",
                     "operator": "==",
-                    "value": "acf\/slides"
+                    "value": "acf\/slidertwocolumn"
                 }
             ]
         ],

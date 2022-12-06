@@ -80,7 +80,7 @@
                 {
                     "param": "block",
                     "operator": "==",
-                    "value": "acf\/contactinfo"
+                    "value": "acf\/contact"
                 }
             ]
         ],

@@ -1,15 +1,15 @@
 [
     {
-        "key": "group_61d59f07ad77e",
-        "title": "Tekst og slider [BLOCK]",
+        "key": "group_61f266633a1bc",
+        "title": "Udtalelse [BLOCK]",
         "fields": [
             {
-                "key": "field_61d59f1176959",
-                "label": "Rækkefølge",
-                "name": "order",
+                "key": "field_61f2666e3482f",
+                "label": "Billede",
+                "name": "image",
                 "aria-label": "",
-                "type": "button_group",
-                "instructions": "Vælg rækkefølge",
+                "type": "image",
+                "instructions": "Vælg\/Upload et billede",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -17,21 +17,143 @@
                     "class": "",
                     "id": ""
                 },
-                "choices": {
-                    "slider": "Slider -> Tekst",
-                    "text": "Tekst -> Slider"
-                },
-                "default_value": "text",
-                "return_format": "value",
-                "allow_null": 0,
-                "layout": "vertical"
+                "return_format": "array",
+                "preview_size": "medium",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
             },
             {
-                "key": "field_6368c130e708c",
-                "label": "Bredde",
-                "name": "width",
+                "key": "field_6229cd63c3152",
+                "label": "Billede formattering",
+                "name": "image_format",
                 "aria-label": "",
                 "type": "button_group",
+                "instructions": "Vælg billede formattering",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_61f2666e3482f",
+                            "operator": "!=empty"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "cover": "Cover",
+                    "contain": "Contain"
+                },
+                "allow_null": 0,
+                "default_value": "cover",
+                "layout": "horizontal",
+                "return_format": "value"
+            },
+            {
+                "key": "field_61f28164d9110",
+                "label": "Rækkefølge",
+                "name": "order",
+                "aria-label": "",
+                "type": "button_group",
+                "instructions": "Vælg visning",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_61f2666e3482f",
+                            "operator": "!=empty"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "text": "Tekst - Billede",
+                    "image": "Billede -Tekst"
+                },
+                "allow_null": 0,
+                "default_value": "",
+                "layout": "horizontal",
+                "return_format": "value"
+            },
+            {
+                "key": "field_61f2669134830",
+                "label": "Udtalelse",
+                "name": "quote",
+                "aria-label": "",
+                "type": "wysiwyg",
+                "instructions": "Indtast og evt formatter en udtalelse",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 1,
+                "delay": 0
+            },
+            {
+                "key": "field_638f38f975c04",
+                "label": "Lille overskrift",
+                "name": "header",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Indtast tekst til den lille overskrift",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_61f266b234831",
+                "label": "Forfatter",
+                "name": "author",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Indtast navn og evt stilling på forfatter af udtalelse",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_636509160a8b9",
+                "label": "Titel",
+                "name": "title",
+                "aria-label": "",
+                "type": "text",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -40,105 +162,11 @@
                     "class": "",
                     "id": ""
                 },
-                "choices": {
-                    "container": "Container",
-                    "toEdge": "Til kanten"
-                },
                 "default_value": "",
-                "return_format": "value",
-                "allow_null": 0,
-                "layout": "vertical"
-            },
-            {
-                "key": "field_61d59ff47695b",
-                "label": "Slides",
-                "name": "slides",
-                "aria-label": "",
-                "type": "repeater",
-                "instructions": "Opret slides enklevis",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "collapsed": "",
-                "min": 0,
-                "max": 0,
-                "layout": "block",
-                "button_label": "Tilføj slide",
-                "sub_fields": [
-                    {
-                        "key": "field_61d5a0147695c",
-                        "label": "Billede",
-                        "name": "image",
-                        "aria-label": "",
-                        "type": "image",
-                        "instructions": "Vælg\/Upload et billede",
-                        "required": 0,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "",
-                            "class": "",
-                            "id": ""
-                        },
-                        "return_format": "array",
-                        "preview_size": "medium",
-                        "library": "all",
-                        "min_width": "",
-                        "min_height": "",
-                        "min_size": "",
-                        "max_width": "",
-                        "max_height": "",
-                        "max_size": "",
-                        "mime_types": "",
-                        "parent_repeater": "field_61d59ff47695b"
-                    },
-                    {
-                        "key": "field_63690614e98db",
-                        "label": "Lille overskrift",
-                        "name": "header",
-                        "aria-label": "",
-                        "type": "text",
-                        "instructions": "Indtast tekst til den lille overskrift",
-                        "required": 0,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "",
-                            "class": "",
-                            "id": ""
-                        },
-                        "default_value": "",
-                        "maxlength": "",
-                        "placeholder": "",
-                        "prepend": "",
-                        "append": "",
-                        "parent_repeater": "field_61d59ff47695b"
-                    },
-                    {
-                        "key": "field_61d59f387695a",
-                        "label": "Tekst",
-                        "name": "text",
-                        "aria-label": "",
-                        "type": "wysiwyg",
-                        "instructions": "Indtast og formatter en kort tekst",
-                        "required": 0,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "",
-                            "class": "",
-                            "id": ""
-                        },
-                        "default_value": "",
-                        "tabs": "all",
-                        "toolbar": "full",
-                        "media_upload": 1,
-                        "delay": 0,
-                        "parent_repeater": "field_61d59ff47695b"
-                    }
-                ],
-                "rows_per_page": 20
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
             }
         ],
         "location": [
@@ -146,7 +174,7 @@
                 {
                     "param": "block",
                     "operator": "==",
-                    "value": "acf\/slidertwocolumn"
+                    "value": "acf\/quote"
                 }
             ]
         ],
