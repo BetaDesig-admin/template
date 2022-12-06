@@ -11,10 +11,6 @@ section.twoColumnTextLink {
 
     div.textContent {
       flex-basis: 50%;
-      h1, h2, h3, h4, h5, h6 {
-        margin: 10px 0 35px;
-        line-height: 1.2;
-      }
 
       div.content {
         p, li, span {
@@ -25,13 +21,6 @@ section.twoColumnTextLink {
         a {
           margin-top: 40px;
         }
-      }
-
-      h3.header {
-        text-transform: uppercase;
-        font-weight: 300;
-        color: $primary-color;
-        margin: unset;
       }
     }
   }

@@ -4,7 +4,7 @@ section.quote {
   div.container {
     display: flex;
     justify-content: space-between;
-    align-content: center;
+    align-items: center;
     flex-wrap: wrap;
 
     div.image {
@@ -60,12 +60,15 @@ section.quote {
           font-size: 18px;
         }
 
-
       }
 
       span.person {
         display: block;
         font-size: 16px;
+      }
+      span.title {
+        display: block;
+        font-size: 14px;
       }
     }
   }

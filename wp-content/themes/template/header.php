@@ -26,7 +26,9 @@ $logo = get_field('logo', 'options');
     <div class="container">
         <section class="logo">
             <a href="<?php echo home_url(); ?>">
-                <?= file_get_contents($logo['url']); ?>
+                <?php if ($logo) {
+                     file_get_contents($logo['url']);
+                } ?>
             </a>
         </section>
         <label class="menuToggle" for="menuToggle">

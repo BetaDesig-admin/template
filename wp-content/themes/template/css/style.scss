@@ -33,6 +33,7 @@ body:not(.wp-admin),
   @import "assets/footer";
   @import "assets/error";
   @import "import/fonts";
+  @import "import/blocks";
 
   .container {
     margin: 0 auto;
