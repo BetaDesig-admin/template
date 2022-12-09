@@ -46,30 +46,47 @@ section.accordion {
       }
 
       .question {
-        border-bottom: 1px solid $primary-color;
-        padding-bottom: 25px;
-        padding-left: 50px;
+        border: 1px solid $black-color;
+        padding: 20px;
         position: relative;
         display: flex;
         align-items: center;
         cursor: pointer;
         font-family: $regular-font;
-      }
+        gap: 50px;
 
-      .question::after {
-        content: url(../images/SVG/icons8-plus.svg);
-        font-size: 1.5rem;
-        position: absolute;
-        left: 20px;
-        transition: 0.2s;
+        div.icon {
+          span {
+            position: absolute;
+            width: 14px;
+            height: 3px;
+            background-color: $primary-color;
 
-        @media(max-width: 950px) {
-          left: 10px;
+            &:last-child {
+              transform: rotate(90deg);
+            }
+          }
         }
-      }
 
-      .question.active::after {
-        transform: rotate(45deg);
+        &.active {
+          // hvis plus-ikonet skal blive til minus-ikon ved at den lodrette streg forsviner
+          span:last-child {
+            opacity: 0;
+            transition: .3s ease-in-out;
+          }
+
+          // hvis plus-ikonet skal blive til et kryds
+          /*div.icon {
+            span:first-of-type {
+              transform: rotate(45deg);
+              transition: .3s ease-in-out;
+            }
+            span:last-of-type {
+              transform: rotate(135deg);
+              transition: .3s ease-in-out;
+            }
+          }*/
+        }
       }
 
       .answercont {

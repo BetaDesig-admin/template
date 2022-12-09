@@ -45,7 +45,13 @@ if ($is_preview) {
                            as $q) { ?>
                 <div class="single">
                     <div class="question">
-                        <?= $q['question'] ?: 'Indtast spørgsmål' ?>
+                        <div class="icon">
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="text">
+                            <?= $q['question'] ?: 'Indtast spørgsmål' ?>
+                        </div>
                     </div>
                     <div class="answercont">
                         <div class="answer">

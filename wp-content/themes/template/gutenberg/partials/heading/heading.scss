@@ -5,7 +5,7 @@ section.heading {
   }
 
   &.fade {
-    margin: $margin-large 0 -($margin-large * 2) 0;
+    margin: $margin-large 0;
     @media (max-width: 769px) {
       margin: 100px 0 -160px;
     }

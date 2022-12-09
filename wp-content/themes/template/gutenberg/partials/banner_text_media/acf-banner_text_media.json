@@ -282,7 +282,7 @@
                 {
                     "param": "block",
                     "operator": "==",
-                    "value": "acf\/textbanner"
+                    "value": "acf\/bannertextmedia"
                 }
             ]
         ],

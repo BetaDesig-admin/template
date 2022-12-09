@@ -38,7 +38,7 @@ $logo = get_field('logo', 'options');
         </label>
         <section class="menu">
             <?php wp_nav_menu(array(
-                'menu' => 'Hovedemenu', // Do not fall back to first non-empty menu.
+                'menu' => 'Hovedmenu', // Do not fall back to first non-empty menu.
                 'theme_location' => 'Hovedmenuen',
                 'fallback_cb' => false // Do not fall back to wp_page_menu()
             )); ?>

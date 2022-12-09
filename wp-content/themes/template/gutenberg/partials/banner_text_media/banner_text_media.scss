@@ -46,23 +46,22 @@ section.textBanner {
       &.changing {
         h1, span {
           line-height: 1.2;
-          -webkit-text-fill-color: transparent;
+          /*-webkit-text-fill-color: transparent;
           -webkit-text-stroke-width: 1px;
-          -webkit-text-stroke-color: $white-color;
+          -webkit-text-stroke-color: $white-color;*/
 
-
-          &:nth-child(2) {
+          /*&:nth-child(2) {
             -webkit-text-fill-color: $white-color;
-          }
+          }*/
         }
       }
 
       &.fade {
         h1, span {
           line-height: 0.8;
-          -webkit-text-fill-color: transparent;
+          /*-webkit-text-fill-color: transparent;
           -webkit-text-stroke-width: 1px;
-          -webkit-text-stroke-color: $white-color;
+          -webkit-text-stroke-color: $white-color;*/
 
           &:nth-child(2) {
             opacity: 0.75;

@@ -48,7 +48,7 @@ if ( $is_preview ) {
                 <?php }
             } ?>
         </div>
-        <?php if ( $media === 'image' ) {
+        <?php if ( $media === 'image' && $image) {
             $image = get_field( 'image' );
             ?>
             <div class="image <?= $imagePlacement ?>">
