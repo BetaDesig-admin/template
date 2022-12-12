@@ -41,7 +41,7 @@ section.heading {
       h1, h2, h3, h4, h5, h6, p, span {
         -webkit-text-fill-color: transparent;
         -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: $white-color;
+        -webkit-text-stroke-color: $black-color;
         line-height: 0.8;
 
         &:nth-child(2) {
@@ -62,11 +62,11 @@ section.heading {
       h1, span {
         -webkit-text-fill-color: transparent;
         -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: $white-color;
+        -webkit-text-stroke-color: $black-color;
         line-height: 1.5;
 
         &:nth-child(2n) {
-          -webkit-text-fill-color: $white-color;
+          -webkit-text-fill-color: $black-color;
         }
       }
     }
