@@ -1,0 +1,34 @@
+section.textimage {
+  div.container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    article, div.image {
+      flex-basis: calc(50% - 50px);
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    div.image{
+      &.imageFirst {
+        order: 1;
+      }
+      &:not(.imageFirst){
+        order: 2;
+      }
+    }
+    article {
+      &.textFirst {
+        order: 1;
+      }
+      &:not(.textFirst){
+        order: 2;
+      }
+    }
+  }
+}
