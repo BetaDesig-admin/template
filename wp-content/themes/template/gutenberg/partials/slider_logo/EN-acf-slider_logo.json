@@ -1,0 +1,166 @@
+[
+    {
+        "key": "group_62f0eeb66c3e4",
+        "title": "Slider (logos) [BLOCK]",
+        "fields": [
+            {
+                "key": "field_636a26e57b67d",
+                "label": "Small heading",
+                "name": "header",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Write text for the small heading",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_62f0ef06c6249",
+                "label": "Heading",
+                "name": "heading",
+                "aria-label": "",
+                "type": "wysiwyg",
+                "instructions": "Write and format heading",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 1,
+                "delay": 0
+            },
+            {
+                "key": "field_6308990079bc8",
+                "label": "Text content",
+                "name": "testimonials",
+                "aria-label": "",
+                "type": "repeater",
+                "instructions": "Opret og udfyld diverse testimonials",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_636a26e57b67d",
+                            "operator": "==",
+                            "value": "content"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layout": "block",
+                "pagination": 0,
+                "min": 0,
+                "max": 0,
+                "collapsed": "",
+                "button_label": "Tilføj",
+                "rows_per_page": 20,
+                "sub_fields": [
+                    {
+                        "key": "field_636a2b92d2303",
+                        "label": "Image\/logo",
+                        "name": "logo",
+                        "aria-label": "",
+                        "type": "image",
+                        "instructions": "Upload image\/logo",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "array",
+                        "library": "all",
+                        "min_width": "",
+                        "min_height": "",
+                        "min_size": "",
+                        "max_width": "",
+                        "max_height": "",
+                        "max_size": "",
+                        "mime_types": "",
+                        "preview_size": "medium",
+                        "parent_repeater": "field_6308990079bc8"
+                    },
+                    {
+                        "key": "field_6308993879bc9",
+                        "label": "Heading",
+                        "name": "heading",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "Write a short heading (will be shown in bold font)",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "parent_repeater": "field_6308990079bc8"
+                    },
+                    {
+                        "key": "field_6308995279bca",
+                        "label": "Short text",
+                        "name": "content",
+                        "aria-label": "",
+                        "type": "textarea",
+                        "instructions": "Write short explaining text",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "rows": "",
+                        "placeholder": "",
+                        "new_lines": "",
+                        "parent_repeater": "field_6308990079bc8"
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/sliderlogo"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0
+    }
+]

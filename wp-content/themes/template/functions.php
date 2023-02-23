@@ -18,7 +18,7 @@ if (function_exists('acf_add_options_page')) {
         'page_title' => 'Basis information',
         'menu_title' => 'Basis information',
         'parent_slug' => 'themes.php',
-    ));
+    )); 
 }
 
 function fb_mce_editor_buttons($buttons)

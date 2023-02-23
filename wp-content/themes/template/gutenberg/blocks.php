@@ -42,6 +42,7 @@ function register_blocks()
     acf_register_block([
         'name' => 'twocolumn',
         'title' => 'Tekst og billede',
+        //'title' => 'Text and image',
         'render_template' => __DIR__ . '/partials/two_column/two_column.php',
         'category' => 'layout',
         'icon' => 'align-left',
@@ -56,6 +57,7 @@ function register_blocks()
     acf_register_block([
         'name' => 'twocolumnvideo',
         'title' => 'Tekst og video',
+        //'title' => 'Text and video',
         'render_template' => __DIR__ . '/partials/two_column_video/two_column_video.php',
         'category' => 'layout',
         'icon' => 'format-video',
@@ -70,6 +72,7 @@ function register_blocks()
     acf_register_block([
         'name' => 'text',
         'title' => 'Tekst indhold',
+        //'title' => 'Text content',
         'render_template' => __DIR__ . '/partials/text_content/text_content.php',
         'category' => 'layout',
         'icon' => 'welcome-write-blog',
@@ -84,6 +87,7 @@ function register_blocks()
     acf_register_block([
         'name' => 'heading',
         'title' => 'Overskrift/tekst',
+        //'title' => 'Heading/text',
         'render_template' => __DIR__ . '/partials/heading/heading.php',
         'category' => 'layout',
         'icon' => 'heading',
@@ -98,6 +102,7 @@ function register_blocks()
     acf_register_block([
         'name' => 'headinglink',
         'title' => 'Sektion overskrift',
+        //'title' => 'Section heading',
         'render_template' => __DIR__ . '/partials/heading_link/heading_link.php',
         'category' => 'layout',
         'icon' => 'welcome-write-blog',
@@ -126,6 +131,7 @@ function register_blocks()
     acf_register_block([
         'name' => 'bannertextmedia',
         'title' => 'Banner med tekst og billede/video',
+        //'title' => 'Banner with text and image/video',
         'render_template' => __DIR__ . '/partials/banner_text_media/banner_text_media.php',
         'category' => 'layout',
         'icon' => 'format-image',
@@ -140,6 +146,7 @@ function register_blocks()
     acf_register_block([
         'name' => 'slidertwocolumn',
         'title' => 'Tekst og slider',
+        //'title' => 'Text and slider',
         'render_template' => __DIR__ . '/partials/two_column_slider/two_column_slider.php',
         'category' => 'layout',
         'icon' => 'images-alt',
@@ -155,6 +162,7 @@ function register_blocks()
     acf_register_block([
         'name' => 'slides',
         'title' => 'Billede slider',
+        //'title' => 'Image slider',
         'render_template' => __DIR__ . '/partials/slider_carousel/slider_carousel.php',
         'category' => 'layout',
         'icon' => 'format-gallery',
@@ -211,6 +219,7 @@ function register_blocks()
     acf_register_block([
         'name' => 'slideraccordion',
         'title' => 'Slider med accordion',
+        //'title' => 'Slider with accordion',
         'render_template' => __DIR__ . '/partials/slider_accordion/slider_accordion.php',
         'category' => 'layout',
         'icon' => 'open-folder',
@@ -225,6 +234,7 @@ function register_blocks()
     acf_register_block([
         'name' => 'tabbedcontent',
         'title' => 'Faner med indhold',
+        //'title' => 'Tabs with content',
         'render_template' => __DIR__ . '/partials/tabbed_content/tabbed_content.php',
         'category' => 'layout',
         'icon' => 'admin-site-alt',
@@ -239,6 +249,7 @@ function register_blocks()
     acf_register_block([
         'name' => 'contact',
         'title' => 'Kontaktinformation',
+        //'title' => 'Contact information',
         'render_template' => __DIR__ . '/partials/contact/contact.php',
         'category' => 'layout',
         'icon' => 'email',
@@ -253,6 +264,7 @@ function register_blocks()
     acf_register_block([
         'name' => 'steps',
         'title' => 'Punkter - step by step',
+        //'title' => 'Steps',
         'render_template' => __DIR__ . '/partials/step_by_step/step_by_step.php',
         'category' => 'layout',
         'icon' => 'editor-ol',
@@ -267,6 +279,7 @@ function register_blocks()
     acf_register_block([
         'name' => 'quote',
         'title' => 'Udtalelse',
+        //'title' => 'Quote',
         'render_template' => __DIR__ . '/partials/two_column_quote/two_column_quote.php',
         'category' => 'layout',
         'icon' => 'format-quote',
@@ -281,6 +294,7 @@ function register_blocks()
     acf_register_block([
         'name' => 'icons',
         'title' => 'Ikoner/billeder med tekst',
+        //'title' => 'Icons/images with text',
         'render_template' => __DIR__ . '/partials/image_with_explanation/image_with_explanation.php',
         'category' => 'layout',
         'icon' => 'grid-view',
@@ -295,6 +309,7 @@ function register_blocks()
     acf_register_block([
         'name' => 'media',
         'title' => 'Billede og video',
+        //'title' => 'Image and video',
         'render_template' => __DIR__ . '/partials/media/media.php',
         'category' => 'layout',
         'icon' => 'format-image',
@@ -309,6 +324,7 @@ function register_blocks()
     acf_register_block([
         'name' => 'employees',
         'title' => 'Ansatte',
+        //'title' => 'Employees',
         'render_template' => __DIR__ . '/partials/employees/employees.php',
         'category' => 'layout',
         'icon' => 'groups',
@@ -323,6 +339,7 @@ function register_blocks()
     acf_register_block([
         'name' => 'textcontact',
         'title' => 'Tekst med kontaktinfo',
+        //'title' => 'Text with contact information',
         'render_template' => __DIR__ . '/partials/text_contact/text_contact.php',
         'category' => 'layout',
         'icon' => 'text-page',
@@ -337,6 +354,7 @@ function register_blocks()
     acf_register_block([
         'name' => 'twocolumtextlink',
         'title' => 'Tekst og link',
+        //'title' => 'Text and link',
         'render_template' => __DIR__ . '/partials/two_column_text_link/two_column_text_link.php',
         'category' => 'layout',
         'icon' => 'align-left',
@@ -351,6 +369,7 @@ function register_blocks()
     acf_register_block([
         'name' => 'table',
         'title' => 'Tabel',
+        //'title' => 'Table',
         'render_template' => __DIR__ . '/partials/table/table.php',
         'category' => 'layout',
         'icon' => 'grid-view',
@@ -365,6 +384,7 @@ function register_blocks()
     acf_register_block([
         'name' => 'productcomparison',
         'title' => 'Produkt sammenligning',
+        //'title' => 'Product comparison',
         'render_template' => __DIR__ . '/partials/product_comparison/product_comparison.php',
         'category' => 'layout',
         'icon' => 'admin-multisite',
@@ -379,6 +399,7 @@ function register_blocks()
     acf_register_block([
         'name' => 'productcomparisonbasic',
         'title' => 'Basic produktsammenligning',
+        //'title' => 'Basic product comparison',
         'render_template' => __DIR__ . '/partials/product_comparison_basic/product_comparison_basic.php',
         'category' => 'layout',
         'icon' => 'admin-appearance',

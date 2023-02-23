@@ -1,6 +1,5 @@
 <?php
 // Slider med emner og tilhørende spørgsmål
-// Mulighed for at tilføje tabeller i svar
 
 $header   = get_field( 'header' );
 $subjects = get_field( 'heading' );

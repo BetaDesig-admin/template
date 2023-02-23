@@ -1,0 +1,312 @@
+[
+    {
+        "key": "group_61a620d02f2d5",
+        "title": "Call to action - steps [BLOCK]",
+        "fields": [
+            {
+                "key": "field_61af4d1e377ad",
+                "label": "Left\/right orientation",
+                "name": "order",
+                "aria-label": "",
+                "type": "button_group",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "left": "Left",
+                    "right": "Right"
+                },
+                "default_value": "",
+                "return_format": "value",
+                "allow_null": 0,
+                "layout": "horizontal"
+            },
+            {
+                "key": "field_63690929f7136",
+                "label": "Small heading",
+                "name": "header",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Write text for the small heading",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_61a620d686432",
+                "label": "Heading",
+                "name": "heading",
+                "aria-label": "",
+                "type": "wysiwyg",
+                "instructions": "Indtast en kort overskrift",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 1,
+                "delay": 0
+            },
+            {
+                "key": "field_61af444a235d2",
+                "label": "Choose layout",
+                "name": "mode",
+                "aria-label": "",
+                "type": "button_group",
+                "instructions": "Choose layout",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "stepMode": "Steps",
+                    "factMode": "Facts",
+                    "postMode": "Posts"
+                },
+                "default_value": "stepMode : Steps",
+                "return_format": "value",
+                "allow_null": 0,
+                "layout": "horizontal"
+            },
+            {
+                "key": "field_61af4480235d3",
+                "label": "Facts",
+                "name": "facts",
+                "aria-label": "",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_61af444a235d2",
+                            "operator": "==",
+                            "value": "factMode"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 0,
+                "max": 0,
+                "layout": "block",
+                "button_label": "Tilføj fact",
+                "rows_per_page": 20,
+                "sub_fields": [
+                    {
+                        "key": "field_61af448b235d4",
+                        "label": "Index",
+                        "name": "index",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "Write very short text",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "parent_repeater": "field_61af4480235d3"
+                    },
+                    {
+                        "key": "field_61af44b1235d5",
+                        "label": "Content",
+                        "name": "text",
+                        "aria-label": "",
+                        "type": "wysiwyg",
+                        "instructions": "Write and format the content",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "tabs": "all",
+                        "toolbar": "full",
+                        "media_upload": 1,
+                        "delay": 0,
+                        "parent_repeater": "field_61af4480235d3"
+                    }
+                ]
+            },
+            {
+                "key": "field_61a620eb86433",
+                "label": "Steps",
+                "name": "steps",
+                "aria-label": "",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_61af444a235d2",
+                            "operator": "==",
+                            "value": "stepMode"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 0,
+                "max": 0,
+                "layout": "block",
+                "button_label": "Tilføj nummer",
+                "rows_per_page": 20,
+                "sub_fields": [
+                    {
+                        "key": "field_61a620fe86434",
+                        "label": "Text",
+                        "name": "text",
+                        "aria-label": "",
+                        "type": "wysiwyg",
+                        "instructions": "Write and format text",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "tabs": "all",
+                        "toolbar": "full",
+                        "media_upload": 1,
+                        "delay": 0,
+                        "parent_repeater": "field_61a620eb86433"
+                    }
+                ]
+            },
+            {
+                "key": "field_61af5d0d3da87",
+                "label": "Post",
+                "name": "weekposts",
+                "aria-label": "",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_61af444a235d2",
+                            "operator": "==",
+                            "value": "postMode"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layout": "block",
+                "pagination": 0,
+                "min": 0,
+                "max": 0,
+                "collapsed": "",
+                "button_label": "Tilføj notat",
+                "rows_per_page": 20,
+                "sub_fields": [
+                    {
+                        "key": "field_61af5d203da88",
+                        "label": "Day",
+                        "name": "day",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "Write day\/note",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "parent_repeater": "field_61af5d0d3da87"
+                    },
+                    {
+                        "key": "field_61af5d2f3da89",
+                        "label": "Note",
+                        "name": "notat",
+                        "aria-label": "",
+                        "type": "textarea",
+                        "instructions": "Write very short text",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "rows": "",
+                        "placeholder": "",
+                        "new_lines": "",
+                        "parent_repeater": "field_61af5d0d3da87"
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/steps"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0
+    }
+]

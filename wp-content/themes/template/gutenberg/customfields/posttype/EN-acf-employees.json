@@ -1,0 +1,90 @@
+[
+    {
+        "key": "group_61a77a89e2954",
+        "title": "Employees [POST-TYPE]",
+        "fields": [
+            {
+                "key": "field_61a77ab4cded1",
+                "label": "Image",
+                "name": "employee_image",
+                "aria-label": "",
+                "type": "image",
+                "instructions": "Choose\/upload image of the employee",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": "",
+                "preview_size": "medium"
+            },
+            {
+                "key": "field_61a77b2fcded3",
+                "label": "Position",
+                "name": "employee_position",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Write the employee's position",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_6334022d86a9b",
+                "label": "Email address",
+                "name": "employee_email",
+                "aria-label": "",
+                "type": "email",
+                "instructions": "Write the employee's email address",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "post"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0
+    }
+]

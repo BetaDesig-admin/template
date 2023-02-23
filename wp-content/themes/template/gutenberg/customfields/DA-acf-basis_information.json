@@ -22,7 +22,7 @@
             },
             {
                 "key": "field_62738dee185e1",
-                "label": "Firmanavn",
+                "label": "Firma navn",
                 "name": "company",
                 "aria-label": "",
                 "type": "text",
@@ -30,15 +30,40 @@
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
-                    "width": "",
+                    "width": "50",
                     "class": "",
                     "id": ""
                 },
                 "default_value": "",
+                "maxlength": "",
                 "placeholder": "",
                 "prepend": "",
-                "append": "",
-                "maxlength": ""
+                "append": ""
+            },
+            {
+                "key": "field_63f493d3ddca2",
+                "label": "Logo",
+                "name": "logo",
+                "aria-label": "",
+                "type": "image",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": "",
+                "preview_size": "medium"
             },
             {
                 "key": "field_62738dd6185df",
@@ -66,7 +91,7 @@
                 "name": "short_desc",
                 "aria-label": "",
                 "type": "textarea",
-                "instructions": "Indtast en kort beskrivelse af siden",
+                "instructions": "Indtast kort beskrivelse om virksomheden",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -75,9 +100,9 @@
                     "id": ""
                 },
                 "default_value": "",
-                "placeholder": "",
                 "maxlength": "",
                 "rows": "",
+                "placeholder": "",
                 "new_lines": ""
             },
             {
@@ -99,7 +124,7 @@
             },
             {
                 "key": "field_62738d8a185db",
-                "label": "Vej og Nr",
+                "label": "Vejnavn og nummer",
                 "name": "street",
                 "aria-label": "",
                 "type": "text",
@@ -112,10 +137,10 @@
                     "id": ""
                 },
                 "default_value": "",
+                "maxlength": "",
                 "placeholder": "",
                 "prepend": "",
-                "append": "",
-                "maxlength": ""
+                "append": ""
             },
             {
                 "key": "field_62738d99185dc",
@@ -123,7 +148,7 @@
                 "name": "city",
                 "aria-label": "",
                 "type": "text",
-                "instructions": "Indtast bynavn",
+                "instructions": "Indtast by",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -132,10 +157,10 @@
                     "id": ""
                 },
                 "default_value": "",
+                "maxlength": "",
                 "placeholder": "",
                 "prepend": "",
-                "append": "",
-                "maxlength": ""
+                "append": ""
             },
             {
                 "key": "field_62738dbe185dd",
@@ -152,10 +177,10 @@
                     "id": ""
                 },
                 "default_value": "",
+                "maxlength": "",
                 "placeholder": "",
                 "prepend": "",
-                "append": "",
-                "maxlength": ""
+                "append": ""
             },
             {
                 "key": "field_6364bd9480224",
@@ -197,7 +222,7 @@
                 "name": "infoemail",
                 "aria-label": "",
                 "type": "email",
-                "instructions": "Indtast en Info mail",
+                "instructions": "Indtast info email",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -216,7 +241,7 @@
                 "name": "contactemail",
                 "aria-label": "",
                 "type": "email",
-                "instructions": "Indtast en kontakt email",
+                "instructions": "Indtast kontakt email",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -235,7 +260,7 @@
                 "name": "phone",
                 "aria-label": "",
                 "type": "text",
-                "instructions": "Indtast telefon nummer",
+                "instructions": "Indtast telefonnummer",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -244,10 +269,10 @@
                     "id": ""
                 },
                 "default_value": "",
+                "maxlength": "",
                 "placeholder": "",
                 "prepend": "",
-                "append": "",
-                "maxlength": ""
+                "append": ""
             },
             {
                 "key": "field_6316fef6b1456",
@@ -301,48 +326,6 @@
                 "placeholder": ""
             },
             {
-                "key": "field_633d7ed2cc0a0",
-                "label": "Menu",
-                "name": "",
-                "aria-label": "",
-                "type": "tab",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "placement": "top",
-                "endpoint": 0
-            },
-            {
-                "key": "field_633d7ee6cc0a1",
-                "label": "Baggrundsbillede til menu",
-                "name": "background_image",
-                "aria-label": "",
-                "type": "image",
-                "instructions": "Upload baggrundsbillede til menu",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "return_format": "array",
-                "preview_size": "medium",
-                "library": "all",
-                "min_width": "",
-                "min_height": "",
-                "min_size": "",
-                "max_width": "",
-                "max_height": "",
-                "max_size": "",
-                "mime_types": ""
-            },
-            {
                 "key": "field_634ffdab77a13",
                 "label": "404 side",
                 "name": "",
@@ -360,37 +343,12 @@
                 "endpoint": 0
             },
             {
-                "key": "field_634ffdb577a14",
-                "label": "Baggrundsbillede",
-                "name": "not_found_background",
-                "aria-label": "",
-                "type": "image",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "return_format": "array",
-                "library": "all",
-                "min_width": "",
-                "min_height": "",
-                "min_size": "",
-                "max_width": "",
-                "max_height": "",
-                "max_size": "",
-                "mime_types": "",
-                "preview_size": "medium"
-            },
-            {
                 "key": "field_634ffdc777a15",
                 "label": "Tekst",
                 "name": "not_found_text",
                 "aria-label": "",
                 "type": "wysiwyg",
-                "instructions": "",
+                "instructions": "Indtast og formater tekst",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {

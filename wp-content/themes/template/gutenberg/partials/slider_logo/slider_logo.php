@@ -1,5 +1,6 @@
 <?php
 // Block med logoer og tilhørende overskrift og tekst
+// Evt opret posttype hvor logoer kan tilføjes (bruges på Savants i reference-slideren)
 
 if ( $is_preview ) {
     if ( ! $testimonials ) {

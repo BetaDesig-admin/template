@@ -1,0 +1,501 @@
+[
+    {
+        "key": "group_6273994b4936f",
+        "title": "Text and image [BLOCK]",
+        "fields": [
+            {
+                "key": "field_627399817bcbc",
+                "label": "Order",
+                "name": "order",
+                "aria-label": "",
+                "type": "button_group",
+                "instructions": "Choose the element to be shown on the left side",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "33",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "image": "Image",
+                    "text": "Tekst"
+                },
+                "default_value": "",
+                "return_format": "value",
+                "allow_null": 0,
+                "layout": "vertical"
+            },
+            {
+                "key": "field_632325133b374",
+                "label": "Text or contact form?",
+                "name": "contact_form",
+                "aria-label": "",
+                "type": "button_group",
+                "instructions": "Choose between contact form and text",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "33",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "text": "Text",
+                    "form": "Contact form"
+                },
+                "default_value": "",
+                "return_format": "value",
+                "allow_null": 0,
+                "layout": "vertical"
+            },
+            {
+                "key": "field_63232d98d1a58",
+                "label": "Width",
+                "name": "width",
+                "aria-label": "",
+                "type": "button_group",
+                "instructions": "Choose if the image should align with the edge of the screen or the container",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "33",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "container": "Container",
+                    "toEdge": "To the edge"
+                },
+                "default_value": "",
+                "return_format": "value",
+                "allow_null": 0,
+                "layout": "vertical"
+            },
+            {
+                "key": "field_627399617bcba",
+                "label": "Image",
+                "name": "image",
+                "aria-label": "",
+                "type": "image",
+                "instructions": "Select\/upload image",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "20",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": "",
+                "preview_size": "medium"
+            },
+            {
+                "key": "field_632c4c0b6317d",
+                "label": "Rotate image on mobile?",
+                "name": "img_rotate",
+                "aria-label": "",
+                "type": "button_group",
+                "instructions": "Choose if the image should be rotated on mobile. \r\n\r\nLandscape format images cannot be rotated on mobile.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "30",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "noRotate": "Don't rotate",
+                    "rotate": "Rotate"
+                },
+                "default_value": "",
+                "return_format": "value",
+                "allow_null": 0,
+                "layout": "vertical"
+            },
+            {
+                "key": "field_634d56a1b30cd",
+                "label": "Should the image be narrower on mobile?",
+                "name": "img_small",
+                "aria-label": "",
+                "type": "button_group",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_632c4c0b6317d",
+                            "operator": "==",
+                            "value": "noRotate"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "30",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "noSmall": "Not narrower",
+                    "small": "Narrower"
+                },
+                "default_value": "",
+                "return_format": "value",
+                "allow_null": 0,
+                "layout": "vertical"
+            },
+            {
+                "key": "field_633426772018f",
+                "label": "Left or right aligned text",
+                "name": "text_align",
+                "aria-label": "",
+                "type": "button_group",
+                "instructions": "Choose if the text should be left or right aligned",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "0",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "left": "Left",
+                    "right": "Right"
+                },
+                "default_value": "",
+                "return_format": "value",
+                "allow_null": 0,
+                "layout": "vertical"
+            },
+            {
+                "key": "field_632324db3b372",
+                "label": "Small headline",
+                "name": "header",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Insert text for the small headline",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_627399707bcbb",
+                "label": "Text",
+                "name": "text",
+                "aria-label": "",
+                "type": "wysiwyg",
+                "instructions": "Insert text and format it",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_632325133b374",
+                            "operator": "==",
+                            "value": "text"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 1,
+                "delay": 0
+            },
+            {
+                "key": "field_63242e1352646",
+                "label": "Headline for contact form",
+                "name": "contact_header",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_632325133b374",
+                            "operator": "==",
+                            "value": "form"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_632427cc443fa",
+                "label": "Contact form",
+                "name": "contact",
+                "aria-label": "",
+                "type": "acf_cf7",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_632325133b374",
+                            "operator": "==",
+                            "value": "form"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "key": "field_632c146a391c3",
+                "label": "Text on the side",
+                "name": "side_text",
+                "aria-label": "",
+                "type": "button_group",
+                "instructions": "Choose if there should be text on the side",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "25",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "noText": "No text",
+                    "text": "Text"
+                },
+                "default_value": "",
+                "return_format": "value",
+                "allow_null": 0,
+                "layout": "vertical"
+            },
+            {
+                "key": "field_632c150d391c4",
+                "label": "Text above or below image",
+                "name": "text_placement",
+                "aria-label": "",
+                "type": "button_group",
+                "instructions": "Choose if the text should be above or below the image",
+                "required": 1,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_632c146a391c3",
+                            "operator": "==",
+                            "value": "text"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "25",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "over": "Above",
+                    "under": "Below"
+                },
+                "default_value": "",
+                "return_format": "value",
+                "allow_null": 0,
+                "layout": "vertical"
+            },
+            {
+                "key": "field_632c15ab391c5",
+                "label": "Different text\/content?",
+                "name": "different_content",
+                "aria-label": "",
+                "type": "button_group",
+                "instructions": "Choose if the text\/content should be the same or different",
+                "required": 1,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_632c146a391c3",
+                            "operator": "==",
+                            "value": "text"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "25",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "single": "Same",
+                    "multiple": "Different"
+                },
+                "default_value": "",
+                "return_format": "value",
+                "allow_null": 0,
+                "layout": "vertical"
+            },
+            {
+                "key": "field_632c1675391c6",
+                "label": "Text",
+                "name": "single_text",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Insert short text for the page. The taller the image is, the more text can be added.",
+                "required": 1,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_632c15ab391c5",
+                            "operator": "==",
+                            "value": "single"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "25",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_632c16bb391c7",
+                "label": "Text",
+                "name": "multiple_text",
+                "aria-label": "",
+                "type": "repeater",
+                "instructions": "Press \"Add field\" and add 3 rows of short text. The taller the image is, the more text can be added.",
+                "required": 1,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_632c15ab391c5",
+                            "operator": "==",
+                            "value": "multiple"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "25",
+                    "class": "",
+                    "id": ""
+                },
+                "layout": "table",
+                "pagination": 0,
+                "min": 3,
+                "max": 3,
+                "collapsed": "",
+                "button_label": "Add Row",
+                "rows_per_page": 20,
+                "sub_fields": [
+                    {
+                        "key": "field_632c1712391c8",
+                        "label": "Text",
+                        "name": "singles",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": [
+                            [
+                                {
+                                    "field": "field_632c15ab391c5",
+                                    "operator": "==",
+                                    "value": "multiple"
+                                }
+                            ]
+                        ],
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "parent_repeater": "field_632c16bb391c7"
+                    }
+                ]
+            },
+            {
+                "key": "field_634fc5cfca66b",
+                "label": "Extra spacing below",
+                "name": "spacing",
+                "aria-label": "",
+                "type": "button_group",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_632c146a391c3",
+                            "operator": "==",
+                            "value": "text"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "noSpacing": "No extra spacing",
+                    "spacing": "Extra spacing"
+                },
+                "default_value": "",
+                "return_format": "value",
+                "allow_null": 0,
+                "layout": "vertical"
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/twocolumn"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0
+    }
+]

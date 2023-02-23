@@ -26,8 +26,10 @@ $logo = get_field('logo', 'options');
     <div class="container">
         <section class="logo">
             <a href="<?php echo home_url(); ?>">
-                <?php if ($logo) {
-                     file_get_contents($logo['url']);
+                <?php if ($logo) { ?>
+                    <img src="<?= $logo['url'] ?>" alt="">
+                <?php } else {
+                    file_get_contents(get_template_directory() . "/images/logo.png");
                 } ?>
             </a>
         </section>

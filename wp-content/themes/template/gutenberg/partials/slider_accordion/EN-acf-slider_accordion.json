@@ -5,11 +5,11 @@
         "fields": [
             {
                 "key": "field_6352603aaa150",
-                "label": "Lille overskrift",
+                "label": "Small heading",
                 "name": "header",
                 "aria-label": "",
                 "type": "text",
-                "instructions": "Indtast tekst til den lille overskrift og tilføj emner og tilhørende spørgsmål",
+                "instructions": "Write text for the small heading and add topics and the related questions",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -25,7 +25,7 @@
             },
             {
                 "key": "field_63514a2e2afb8",
-                "label": "Overskrift",
+                "label": "Heading",
                 "name": "heading",
                 "aria-label": "",
                 "type": "repeater",
@@ -47,7 +47,7 @@
                 "sub_fields": [
                     {
                         "key": "field_63514a622afb9",
-                        "label": "Emne",
+                        "label": "Topic",
                         "name": "subject",
                         "aria-label": "",
                         "type": "text",
@@ -68,7 +68,7 @@
                     },
                     {
                         "key": "field_63514aa72afba",
-                        "label": "Spørgsmål",
+                        "label": "Questions",
                         "name": "questions",
                         "aria-label": "",
                         "type": "repeater",
@@ -81,7 +81,6 @@
                             "id": ""
                         },
                         "layout": "table",
-                        "pagination": 0,
                         "min": 0,
                         "max": 0,
                         "collapsed": "",
@@ -90,7 +89,7 @@
                         "sub_fields": [
                             {
                                 "key": "field_63514abc2afbb",
-                                "label": "Overskrift",
+                                "label": "Heading",
                                 "name": "header",
                                 "aria-label": "",
                                 "type": "text",
@@ -111,7 +110,7 @@
                             },
                             {
                                 "key": "field_63514ad12afbc",
-                                "label": "Svar",
+                                "label": "Answer",
                                 "name": "answer",
                                 "aria-label": "",
                                 "type": "wysiwyg",
@@ -128,56 +127,6 @@
                                 "toolbar": "full",
                                 "media_upload": 1,
                                 "delay": 0,
-                                "parent_repeater": "field_63514aa72afba"
-                            },
-                            {
-                                "key": "field_6356402365847",
-                                "label": "Indeholder svaret en tabel?",
-                                "name": "if_table",
-                                "aria-label": "",
-                                "type": "button_group",
-                                "instructions": "Vælg om svaret skal indeholde en tabel\r\n\r\n(hvis tabellen ikke kommer frem så slå preview til og fra)",
-                                "required": 0,
-                                "conditional_logic": 0,
-                                "wrapper": {
-                                    "width": "",
-                                    "class": "",
-                                    "id": ""
-                                },
-                                "choices": {
-                                    "noTable": "Ingen tabel",
-                                    "table": "Tabel"
-                                },
-                                "default_value": "",
-                                "return_format": "value",
-                                "allow_null": 0,
-                                "layout": "horizontal",
-                                "parent_repeater": "field_63514aa72afba"
-                            },
-                            {
-                                "key": "field_635641784ac4d",
-                                "label": "Tabel",
-                                "name": "table",
-                                "aria-label": "",
-                                "type": "table",
-                                "instructions": "Udfyld tabellen",
-                                "required": 0,
-                                "conditional_logic": [
-                                    [
-                                        {
-                                            "field": "field_6356402365847",
-                                            "operator": "==",
-                                            "value": "table"
-                                        }
-                                    ]
-                                ],
-                                "wrapper": {
-                                    "width": "",
-                                    "class": "",
-                                    "id": ""
-                                },
-                                "use_header": 2,
-                                "use_caption": 2,
                                 "parent_repeater": "field_63514aa72afba"
                             }
                         ],
