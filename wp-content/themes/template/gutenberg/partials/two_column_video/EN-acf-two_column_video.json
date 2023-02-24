@@ -1,0 +1,228 @@
+[
+    {
+        "key": "group_63734f6494363",
+        "title": "Text and video [BLOCK]",
+        "fields": [
+            {
+                "key": "field_63734f64e4952",
+                "label": "Order",
+                "name": "order",
+                "aria-label": "",
+                "type": "button_group",
+                "instructions": "Choose order",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "text": "Text",
+                    "video": "Video"
+                },
+                "default_value": "",
+                "return_format": "value",
+                "allow_null": 0,
+                "layout": "vertical"
+            },
+            {
+                "key": "field_6373505de4956",
+                "label": "Video layout",
+                "name": "videolayout",
+                "aria-label": "",
+                "type": "button_group",
+                "instructions": "Choose which type of video",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "youtube": "Youtube",
+                    "file": "Videofile"
+                },
+                "default_value": "",
+                "return_format": "value",
+                "allow_null": 0,
+                "layout": "horizontal"
+            },
+            {
+                "key": "field_63734fc2e4953",
+                "label": "Video",
+                "name": "video",
+                "aria-label": "",
+                "type": "group",
+                "instructions": "Upload thumbnail, webm and mp4",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_6373505de4956",
+                            "operator": "==",
+                            "value": "file"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layout": "block",
+                "sub_fields": [
+                    {
+                        "key": "field_6373501ae4954",
+                        "label": "Thumbnail",
+                        "name": "thumbnail",
+                        "aria-label": "",
+                        "type": "image",
+                        "instructions": "Upload thumbnail to the video",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "array",
+                        "library": "all",
+                        "min_width": "",
+                        "min_height": "",
+                        "min_size": "",
+                        "max_width": "",
+                        "max_height": "",
+                        "max_size": "",
+                        "mime_types": "",
+                        "preview_size": "medium"
+                    },
+                    {
+                        "key": "field_637382b8a9ea1",
+                        "label": "Webm",
+                        "name": "webm",
+                        "aria-label": "",
+                        "type": "file",
+                        "instructions": "Upload the webm file",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "",
+                        "library": "",
+                        "min_size": "",
+                        "max_size": "",
+                        "mime_types": ""
+                    },
+                    {
+                        "key": "field_63735025e4955",
+                        "label": "MP4",
+                        "name": "mp4",
+                        "aria-label": "",
+                        "type": "file",
+                        "instructions": "Upload the mp4 file",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "array",
+                        "library": "all",
+                        "min_size": "",
+                        "max_size": "",
+                        "mime_types": ""
+                    }
+                ]
+            },
+            {
+                "key": "field_63735092e4957",
+                "label": "Youtube link",
+                "name": "youtube",
+                "aria-label": "",
+                "type": "url",
+                "instructions": "Insert an URL from Youtube",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_6373505de4956",
+                            "operator": "==",
+                            "value": "youtube"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": ""
+            },
+            {
+                "key": "field_63735396865bd",
+                "label": "Small heading",
+                "name": "header",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Write text for the small heading",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_637353ac865be",
+                "label": "Text",
+                "name": "text",
+                "aria-label": "",
+                "type": "wysiwyg",
+                "instructions": "Write text and format it",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 1,
+                "delay": 0
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/twocolumnvideo"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0
+    }
+]

@@ -1,0 +1,163 @@
+[
+    {
+        "key": "group_61d59f07ad77e",
+        "title": "Text and slider [BLOCK]",
+        "fields": [
+            {
+                "key": "field_61d59f1176959",
+                "label": "Order",
+                "name": "order",
+                "aria-label": "",
+                "type": "button_group",
+                "instructions": "Choose the order",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "slider": "Slider -> Text",
+                    "text": "Text -> Slider"
+                },
+                "default_value": "text",
+                "return_format": "value",
+                "allow_null": 0,
+                "layout": "vertical"
+            },
+            {
+                "key": "field_6368c130e708c",
+                "label": "Width",
+                "name": "width",
+                "aria-label": "",
+                "type": "button_group",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "container": "Container",
+                    "toEdge": "To edge"
+                },
+                "default_value": "",
+                "return_format": "value",
+                "allow_null": 0,
+                "layout": "vertical"
+            },
+            {
+                "key": "field_61d59ff47695b",
+                "label": "Slides",
+                "name": "slides",
+                "aria-label": "",
+                "type": "repeater",
+                "instructions": "Create single slides",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 0,
+                "max": 0,
+                "layout": "block",
+                "button_label": "Add slide",
+                "rows_per_page": 20,
+                "sub_fields": [
+                    {
+                        "key": "field_61d5a0147695c",
+                        "label": "Image",
+                        "name": "image",
+                        "aria-label": "",
+                        "type": "image",
+                        "instructions": "Choose\/Upload an image",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "array",
+                        "preview_size": "medium",
+                        "library": "all",
+                        "min_width": "",
+                        "min_height": "",
+                        "min_size": "",
+                        "max_width": "",
+                        "max_height": "",
+                        "max_size": "",
+                        "mime_types": "",
+                        "parent_repeater": "field_61d59ff47695b"
+                    },
+                    {
+                        "key": "field_63690614e98db",
+                        "label": "Small heading",
+                        "name": "header",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "Write text for the small heading",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "parent_repeater": "field_61d59ff47695b"
+                    },
+                    {
+                        "key": "field_61d59f387695a",
+                        "label": "Text",
+                        "name": "text",
+                        "aria-label": "",
+                        "type": "wysiwyg",
+                        "instructions": "Write and format a short text",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "tabs": "all",
+                        "toolbar": "full",
+                        "media_upload": 1,
+                        "delay": 0,
+                        "parent_repeater": "field_61d59ff47695b"
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/slidertwocolumn"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0
+    }
+]

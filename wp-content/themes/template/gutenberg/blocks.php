@@ -26,9 +26,6 @@ function allow_blocks($blocks, $post)
         'acf/textcontact',
         'acf/twocolumtextlink',
         'acf/table',
-        'acf/productcomparison',
-        'acf/productcomparisonbasic',
-        'acf/textimage',
     ];
 
     return $blocks;
@@ -42,8 +39,8 @@ function register_blocks()
 
     acf_register_block([
         'name' => 'twocolumn',
-        'title' => 'Tekst og billede',
-        //'title' => 'Text and image',
+        'title' => 'Tekst/kontaktformular og billede',
+        //'title' => 'Text/contact form and image',
         'render_template' => __DIR__ . '/partials/two_column/two_column.php',
         'category' => 'layout',
         'icon' => 'align-left',
@@ -374,36 +371,6 @@ function register_blocks()
         'render_template' => __DIR__ . '/partials/table/table.php',
         'category' => 'layout',
         'icon' => 'grid-view',
-        'mode' => 'preview',
-        'example' => array(
-            'attributes' => array(
-                'mode' => 'preview',
-            )
-        )
-    ]);
-
-    acf_register_block([
-        'name' => 'productcomparison',
-        'title' => 'Produkt sammenligning',
-        //'title' => 'Product comparison',
-        'render_template' => __DIR__ . '/partials/product_comparison/product_comparison.php',
-        'category' => 'layout',
-        'icon' => 'admin-multisite',
-        'mode' => 'preview',
-        'example' => array(
-            'attributes' => array(
-                'mode' => 'preview',
-            )
-        )
-    ]);
-
-    acf_register_block([
-        'name' => 'productcomparisonbasic',
-        'title' => 'Basic produktsammenligning',
-        //'title' => 'Basic product comparison',
-        'render_template' => __DIR__ . '/partials/product_comparison_basic/product_comparison_basic.php',
-        'category' => 'layout',
-        'icon' => 'admin-appearance',
         'mode' => 'preview',
         'example' => array(
             'attributes' => array(

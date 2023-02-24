@@ -1,0 +1,196 @@
+[
+    {
+        "key": "group_63526694d40b4",
+        "title": "Faner med indhold [BLOCK]",
+        "fields": [
+            {
+                "key": "field_63526694379c7",
+                "label": "Lille overskrift",
+                "name": "header",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Indtast tekst til den lille overskrift",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_635266cd379c8",
+                "label": "Faner",
+                "name": "journey",
+                "aria-label": "",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layout": "table",
+                "pagination": 0,
+                "min": 0,
+                "max": 0,
+                "collapsed": "",
+                "button_label": "Tilføj fane",
+                "rows_per_page": 20,
+                "sub_fields": [
+                    {
+                        "key": "field_63526718379ca",
+                        "label": "Fane",
+                        "name": "name",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "parent_repeater": "field_635266cd379c8"
+                    },
+                    {
+                        "key": "field_635266ed379c9",
+                        "label": "Tekst",
+                        "name": "text",
+                        "aria-label": "",
+                        "type": "wysiwyg",
+                        "instructions": "Indtast tekst til denne fane og formater det",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "tabs": "all",
+                        "toolbar": "full",
+                        "media_upload": 1,
+                        "delay": 0,
+                        "parent_repeater": "field_635266cd379c8"
+                    },
+                    {
+                        "key": "field_63566b5d59d1c",
+                        "label": "Video",
+                        "name": "video",
+                        "aria-label": "",
+                        "type": "group",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "layout": "block",
+                        "parent_repeater": "field_635266cd379c8",
+                        "sub_fields": [
+                            {
+                                "key": "field_636a227e78f0a",
+                                "label": "Video thumbnail",
+                                "name": "video_thumbnail",
+                                "aria-label": "",
+                                "type": "image",
+                                "instructions": "Upload thumbnail til videoen",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "return_format": "array",
+                                "library": "all",
+                                "min_width": "",
+                                "min_height": "",
+                                "min_size": "",
+                                "max_width": "",
+                                "max_height": "",
+                                "max_size": "",
+                                "mime_types": "",
+                                "preview_size": "medium"
+                            },
+                            {
+                                "key": "field_63568c87215d6",
+                                "label": "Webm",
+                                "name": "webm",
+                                "aria-label": "",
+                                "type": "file",
+                                "instructions": "Upload webm filen",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "return_format": "array",
+                                "library": "all",
+                                "min_size": "",
+                                "max_size": "",
+                                "mime_types": ""
+                            },
+                            {
+                                "key": "field_63568c9d215d7",
+                                "label": "MP4",
+                                "name": "mp4",
+                                "aria-label": "",
+                                "type": "file",
+                                "instructions": "Upload mp4 filen",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "return_format": "array",
+                                "library": "all",
+                                "min_size": "",
+                                "max_size": "",
+                                "mime_types": ""
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/tabbedcontent"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0
+    }
+]

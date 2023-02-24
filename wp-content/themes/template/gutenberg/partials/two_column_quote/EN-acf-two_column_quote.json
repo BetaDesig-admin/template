@@ -1,0 +1,191 @@
+[
+    {
+        "key": "group_61f266633a1bc",
+        "title": "Quote [BLOCK]",
+        "fields": [
+            {
+                "key": "field_61f2666e3482f",
+                "label": "Image",
+                "name": "image",
+                "aria-label": "",
+                "type": "image",
+                "instructions": "Choose\/Upload an image",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array",
+                "preview_size": "medium",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            },
+            {
+                "key": "field_6229cd63c3152",
+                "label": "Image format",
+                "name": "image_format",
+                "aria-label": "",
+                "type": "button_group",
+                "instructions": "Choose image format",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_61f2666e3482f",
+                            "operator": "!=empty"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "cover": "Cover",
+                    "contain": "Contain"
+                },
+                "allow_null": 0,
+                "default_value": "cover",
+                "layout": "horizontal",
+                "return_format": "value"
+            },
+            {
+                "key": "field_61f28164d9110",
+                "label": "Order",
+                "name": "order",
+                "aria-label": "",
+                "type": "button_group",
+                "instructions": "Choose order",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_61f2666e3482f",
+                            "operator": "!=empty"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "text": "Text - Image",
+                    "image": "Image - Text"
+                },
+                "allow_null": 0,
+                "default_value": "",
+                "layout": "horizontal",
+                "return_format": "value"
+            },
+            {
+                "key": "field_61f2669134830",
+                "label": "Quote",
+                "name": "quote",
+                "aria-label": "",
+                "type": "wysiwyg",
+                "instructions": "Write the quote (optional: format the text)",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 1,
+                "delay": 0
+            },
+            {
+                "key": "field_638f38f975c04",
+                "label": "Small heading",
+                "name": "header",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Write text for the small heading",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_61f266b234831",
+                "label": "Author",
+                "name": "author",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Write name (optional: write the position of the person)",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_636509160a8b9",
+                "label": "Title",
+                "name": "title",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/quote"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0
+    }
+]

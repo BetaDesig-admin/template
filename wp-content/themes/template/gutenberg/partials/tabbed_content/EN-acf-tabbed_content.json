@@ -1,15 +1,15 @@
 [
     {
         "key": "group_63526694d40b4",
-        "title": "Faner med indhold [BLOCK]",
+        "title": "Tabs with content [BLOCK]",
         "fields": [
             {
                 "key": "field_63526694379c7",
-                "label": "Lille overskrift",
+                "label": "Small heading",
                 "name": "header",
                 "aria-label": "",
                 "type": "text",
-                "instructions": "Indtast tekst til den lille overskrift",
+                "instructions": "Write text for the small heading",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -25,7 +25,7 @@
             },
             {
                 "key": "field_635266cd379c8",
-                "label": "Faner",
+                "label": "Tabs",
                 "name": "journey",
                 "aria-label": "",
                 "type": "repeater",
@@ -47,7 +47,7 @@
                 "sub_fields": [
                     {
                         "key": "field_63526718379ca",
-                        "label": "Fane",
+                        "label": "Tab",
                         "name": "name",
                         "aria-label": "",
                         "type": "text",
@@ -68,11 +68,11 @@
                     },
                     {
                         "key": "field_635266ed379c9",
-                        "label": "Tekst",
+                        "label": "Text",
                         "name": "text",
                         "aria-label": "",
                         "type": "wysiwyg",
-                        "instructions": "Indtast tekst til denne del af rejsen og formater det",
+                        "instructions": "Write text for this tab and format it",
                         "required": 0,
                         "conditional_logic": 0,
                         "wrapper": {
@@ -110,7 +110,7 @@
                                 "name": "video_thumbnail",
                                 "aria-label": "",
                                 "type": "image",
-                                "instructions": "Upload thumbnail til videoen",
+                                "instructions": "Upload thumbnail for the video",
                                 "required": 0,
                                 "conditional_logic": 0,
                                 "wrapper": {
@@ -135,7 +135,7 @@
                                 "name": "webm",
                                 "aria-label": "",
                                 "type": "file",
-                                "instructions": "Upload webm filen",
+                                "instructions": "Upload the webm file",
                                 "required": 0,
                                 "conditional_logic": 0,
                                 "wrapper": {
@@ -155,7 +155,7 @@
                                 "name": "mp4",
                                 "aria-label": "",
                                 "type": "file",
-                                "instructions": "Upload mp4 filen",
+                                "instructions": "Upload the mp4 file",
                                 "required": 0,
                                 "conditional_logic": 0,
                                 "wrapper": {

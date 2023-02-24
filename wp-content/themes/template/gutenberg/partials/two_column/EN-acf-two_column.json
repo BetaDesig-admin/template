@@ -19,7 +19,7 @@
                 },
                 "choices": {
                     "image": "Image",
-                    "text": "Tekst"
+                    "text": "Text"
                 },
                 "default_value": "",
                 "return_format": "value",

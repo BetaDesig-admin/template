@@ -1,0 +1,103 @@
+[
+    {
+        "key": "group_6363bd255b109",
+        "title": "Table [BLOCK]",
+        "fields": [
+            {
+                "key": "field_637751992ea37",
+                "label": "Small heading",
+                "name": "header",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Write text for the small heading",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_6363c98dd39ff",
+                "label": "Text",
+                "name": "text",
+                "aria-label": "",
+                "type": "wysiwyg",
+                "instructions": "Write text and format it",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 1,
+                "delay": 0
+            },
+            {
+                "key": "field_6363bd2517cad",
+                "label": "Table",
+                "name": "table",
+                "aria-label": "",
+                "type": "table",
+                "instructions": "Add columns\/rows and fill them out. Don't make to many columns, because on mobilephones there's not a lot of room for columns.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "use_header": 0,
+                "use_caption": 2
+            },
+            {
+                "key": "field_6363cfbe44fe7",
+                "label": "Table footer",
+                "name": "table_footer",
+                "aria-label": "",
+                "type": "wysiwyg",
+                "instructions": "Write text for under the table and format it",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 1,
+                "delay": 0
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/table"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0
+    }
+]

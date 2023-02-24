@@ -20,6 +20,14 @@ header {
       padding: $padding-xsmall ($padding-xsmall/2);
     }
 
+    section.logo {
+      a {
+        img {
+          max-width: 200px;
+        }
+      }
+    }
+
     label, #menuToggle {
       display: none;
     }
