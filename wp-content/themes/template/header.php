@@ -28,9 +28,10 @@ $logo = get_field('logo', 'options');
             <a href="<?php echo home_url(); ?>">
                 <?php if ($logo) { ?>
                     <img src="<?= $logo['url'] ?>" alt="">
-                <?php } else {
-                    file_get_contents(get_template_directory() . "/images/logo.png");
-                } ?>
+                <?php } else { ?>
+                    <!-- brug denne hvis logoet ikke er en SVG: <img src="<?php echo bloginfo('stylesheet_directory') . "/images/logo/logo.png" ?>" alt=""> -->
+                    <!-- brug denne hvis logoet er en SVG: file_get_contents(get_template_directory() . "/images/logo/logo.png"); -->
+                <?php } ?>
             </a>
         </section>
         <label class="menuToggle" for="menuToggle">
